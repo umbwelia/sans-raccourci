@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sans Raccourci</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <span class="brand">sans raccourci</span>
+    <nav class="nav">
+      <a href="#themes">par thème</a>
+      <a href="#candidats">par candidat</a>
+      <a href="METHODE.md">méthode</a>
+    </nav>
+  </div>
+
+  <h1>Sans Raccourci</h1>
+  <p class="lede">Comprendre qui propose quoi, qui s'est vraiment engagé sur quoi, et comment les médias le racontent. Tous les bords à égalité, chaque affirmation rattachée à sa source.</p>
+
+  <div class="grid-links">
+    <div>
+      <h2 id="themes">Par thème</h2>
+      <ul class="linklist" id="themes-list"><li>chargement...</li></ul>
+    </div>
+    <div>
+      <h2 id="candidats">Par candidat</h2>
+      <p class="count" id="progress"></p>
+      <ul class="linklist" id="candidats-list"><li>chargement...</li></ul>
+    </div>
+  </div>
+
+  <p style="margin-top:28px"><a href="comprendre/les-niveaux-de-mandat.md">comprendre les niveaux de mandat</a></p>
+
+  <div class="foot">pas de commentaires, pas de likes, pas de compteurs. chaque ligne renvoie à sa source. versionné sur GitHub.</div>
+</div>
+
+<script>
+(function(){
+  fetch('data/candidats.json').then(function(r){return r.json();}).then(function(data){
+    var tl=document.getElementById('themes-list'); tl.innerHTML='';
+    (data.themes||[]).forEach(function(t){
+      var li=document.createElement('li');
+      li.innerHTML='<a href="themes/theme.html?t='+encodeURIComponent(t.cle)+'">'+esc(t.label)+'</a>';
+      tl.appendChild(li);
+    });
+    var cl=document.getElementById('candidats-list'); cl.innerHTML='';
+    var cands=data.candidats||[];
+    cands.forEach(function(c){
+      var docCount=(c.positions||[]).length;
+      var total=(data.themes||[]).length;
+      var li=document.createElement('li');
+      li.innerHTML='<a href="candidats/candidat.html?c='+encodeURIComponent(c.slug)+'">'+esc(c.nom)+'</a>'+
+        '<span class="chip">'+docCount+' / '+total+' thèmes</span>';
+      cl.appendChild(li);
+    });
+    document.getElementById('progress').textContent=cands.length+' candidat(s) dans la base pour l\u0027instant. La liste s\u0027allongera avec les fiches.';
+  }).catch(function(){
+    document.getElementById('candidats-list').innerHTML='<li>Impossible de charger les données. En local, lance un serveur (python3 -m http.server) ou publie sur GitHub Pages : les navigateurs bloquent fetch en file://.</li>';
+    document.getElementById('themes-list').innerHTML='';
+  });
+  function esc(s){return (s==null?'':String(s)).replace(/[&<>"]/g,function(m){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];});}
+})();
+</script>
+</body>
+</html>
