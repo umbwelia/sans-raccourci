@@ -1,0 +1,61 @@
+{
+  "_mode_emploi": [
+    "Fichier des photos, separe de candidats.json. Le site fonctionne meme si ce fichier est absent : il affiche alors des avatars d'initiales.",
+    "1. Trouver le portrait sur Wikimedia Commons (commons.wikimedia.org) et verifier que la licence est libre.",
+    "2. Sous l'image, dans 'Autres resolutions', prendre la version 320 ou 400 pixels de large : elle pese 30 a 50 Ko. Ne jamais prendre l'originale.",
+    "3. Renommer le fichier avec le slug du candidat, par exemple marine-tondelier.jpg, et le deposer a la racine du depot.",
+    "4. Remplir les quatre champs ci-dessous. Le credit est une obligation legale des que la photo est utilisee.",
+    "Le champ 'fichier' accepte soit un nom de fichier depose a la racine, soit une URL complete.",
+    "Laisser une entree vide ne casse rien : l'avatar d'initiales prend le relais."
+  ],
+  "_exemple": {
+    "fichier": "prenom-nom.jpg",
+    "auteur": "Nom du photographe",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:..."
+  },
+  "photos": {
+    "jean-luc-melenchon": {
+      "fichier": "",
+      "auteur": "",
+      "licence": "",
+      "source": ""
+    },
+    "marine-tondelier": {
+      "fichier": "",
+      "auteur": "",
+      "licence": "",
+      "source": ""
+    },
+    "edouard-philippe": {
+      "fichier": "",
+      "auteur": "",
+      "licence": "",
+      "source": ""
+    },
+    "marine-le-pen": {
+      "fichier": "",
+      "auteur": "",
+      "licence": "",
+      "source": ""
+    },
+    "bruno-retailleau": {
+      "fichier": "",
+      "auteur": "",
+      "licence": "",
+      "source": ""
+    },
+    "gabriel-attal": {
+      "fichier": "",
+      "auteur": "",
+      "licence": "",
+      "source": ""
+    },
+    "raphael-glucksmann": {
+      "fichier": "",
+      "auteur": "",
+      "licence": "",
+      "source": ""
+    }
+  }
+}
