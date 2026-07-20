@@ -1,0 +1,1067 @@
+{
+  "_doc": "Source de verite des donnees politiques. Les photos sont desormais dans photos.json, un fichier separe : plus besoin d'y toucher ici. Chaque position peut porter un objet 'effet' {issue, resultat, alignement, texte, suite, source} qui dit ce que le vote a produit et si le texte est passe. Chaque acte porte une 'nature' : vote (scrutin nominatif), action (acte executif ou de mouvement, sans vote), absent (n'a pas pris part au scrutin), aucun (pas de mandat permettant d'agir). Chaque position porte un 'contexte' {type, date, ou} indiquant a quelle occasion elle a ete portee : seance publique, depot de texte, declaration, campagne, congres, livre. Chaque candidat porte une 'synthese' {texte, cle} decrivant son positionnement sur le quinquennat 2022-2027, ecrite uniquement a partir des faits sources de sa fiche.",
+  "themes": [
+    {
+      "cle": "economie_fiscalite",
+      "label": "économie et fiscalité"
+    },
+    {
+      "cle": "energie_climat",
+      "label": "énergie et climat"
+    },
+    {
+      "cle": "institutions_democratie",
+      "label": "institutions et démocratie"
+    },
+    {
+      "cle": "travail_social",
+      "label": "travail et social"
+    },
+    {
+      "cle": "immigration",
+      "label": "immigration"
+    },
+    {
+      "cle": "europe_international",
+      "label": "europe et international"
+    },
+    {
+      "cle": "education",
+      "label": "éducation"
+    }
+  ],
+  "candidats": [
+    {
+      "slug": "jean-luc-melenchon",
+      "nom": "Jean-Luc Mélenchon",
+      "bord": "gauche radicale",
+      "parti": "La France insoumise",
+      "statut": "déclarée (annoncée en 2026)",
+      "parcours": [
+        {
+          "periode": "années 1980-1990",
+          "fonction": "Conseiller municipal de Massy, conseiller général puis vice-président du conseil général de l'Essonne",
+          "niveau": "commune et département",
+          "source": "https://www.europe1.fr/dossiers/jean-luc-melenchon"
+        },
+        {
+          "periode": "à partir de 1986",
+          "fonction": "Sénateur de l'Essonne",
+          "niveau": "national (Sénat)",
+          "source": "https://www.publicsenat.fr/actualites/politique/jean-luc-melenchon-quitte-l-assemblee-retour-sur-trente-ans-de-mandats"
+        },
+        {
+          "periode": "2000-2002",
+          "fonction": "Ministre délégué à l'Enseignement professionnel (gouvernement Jospin)",
+          "niveau": "gouvernement",
+          "source": "https://www.europe1.fr/dossiers/jean-luc-melenchon"
+        },
+        {
+          "periode": "2009-2017",
+          "fonction": "Député européen, circonscription Sud-Ouest (élu en 2009, réélu en 2014)",
+          "niveau": "européen",
+          "source": "https://en.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon"
+        },
+        {
+          "periode": "21 juin 2017 au 21 juin 2022",
+          "fonction": "Député de la 4e circonscription des Bouches-du-Rhône. Président du groupe La France insoumise à l'Assemblée de 2017 à octobre 2021, remplacé par Mathilde Panot",
+          "niveau": "national (Assemblée)",
+          "source": "https://2017-2022.nosdeputes.fr/jean-luc-melenchon"
+        },
+        {
+          "periode": "depuis juin 2022",
+          "fonction": "Sans mandat électif. Coprésident de l'Institut La Boétie, figure dirigeante de La France insoumise",
+          "niveau": "mouvement",
+          "source": "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon"
+        }
+      ],
+      "ou_lire_le_bilan": "Sans mandat électif depuis le 21 juin 2022 : son action récente se lit dans ses prises de position et la direction de La France insoumise, pas dans des votes. Son relevé de votes est donc historique, réparti entre l'Assemblée nationale (2017-2022) et le Parlement européen (2009-2017). Repère d'assiduité : pendant la 15e législature, il a participé à 98 % des votes solennels à l'Assemblée.",
+      "positions": [
+        {
+          "theme": "energie_climat",
+          "position": {
+            "texte": "Son groupe a justifié son opposition au texte en le jugeant insuffisant au regard des enjeux climatiques.",
+            "source": "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon",
+            "contexte": {
+              "type": "séance publique",
+              "date": "4 mai 2021",
+              "ou": "Assemblée nationale, explication de vote du groupe La France insoumise lors du scrutin solennel sur la loi climat"
+            }
+          },
+          "acte": {
+            "texte": "Loi climat et résilience, vote solennel du 4 mai 2021 (première lecture) : texte adopté par 332 voix pour, 77 contre et 145 abstentions. Le groupe La France insoumise a voté contre à l'unanimité de ses membres, jugeant le texte insuffisant. Précision de méthode : la source atteste un vote de groupe unanime, la confirmation nominative se lit sur la page du scrutin de l'Assemblée.",
+            "niveau": "national (Assemblée)",
+            "source": "https://lcp.fr/actualites/loi-climat-l-assemblee-nationale-adopte-le-texte-en-premiere-lecture-64120",
+            "nature": "vote",
+            "date": "4 mai 2021"
+          },
+          "effet": {
+            "issue": "adopté malgré son vote",
+            "texte": "Son groupe a voté contre, sans empêcher l'adoption : le texte a poursuivi son parcours, un accord a été trouvé en commission mixte paritaire le 13 juillet 2021, et la loi n° 2021-1104 a été promulguée le 22 août 2021, publiée au Journal officiel le 24 août. Concrètement, ces 305 articles s'appliquent aujourd'hui : interdiction progressive de louer les passoires thermiques, lutte contre l'artificialisation des sols, création d'un délit d'écocide. Le Conseil constitutionnel l'a jugée partiellement conforme le 13 août 2021, censurant des articles sans effet direct sur les émissions.",
+            "source": "https://www.senat.fr/salle-de-presse/202102/climat/pjl-climat-et-resilience.html",
+            "resultat": "adopté",
+            "alignement": "a voté contre le résultat",
+            "suite": "Texte devenu loi. Accord en commission mixte paritaire le 13 juillet 2021, adoption définitive le 20 juillet, promulgation le 22 août 2021 sous le numéro 2021-1104, publication au Journal officiel le 24 août. Le Conseil constitutionnel l'a jugée partiellement conforme le 13 août 2021. Elle s'applique aujourd'hui.",
+            "loi": "promulguée le 22 août 2021",
+            "voie": "vote ordinaire, après commission mixte paritaire",
+            "quinquennat": "La loi climat de 2021 appartient au premier quinquennat. Depuis 2022, l'absence de majorité absolue a rendu l'adoption de textes environnementaux plus difficile, et Jean-Luc Mélenchon n'y participe plus comme parlementaire."
+          }
+        },
+        {
+          "theme": "institutions_democratie",
+          "position": {
+            "texte": "A déposé pendant son mandat une proposition de loi et une proposition de loi organique visant à instaurer la proportionnelle, rapportées le 26 avril 2021.",
+            "source": "https://2017-2022.nosdeputes.fr/jean-luc-melenchon",
+            "contexte": {
+              "type": "dépôt de texte",
+              "date": "26 avril 2021",
+              "ou": "Assemblée nationale, proposition de loi et proposition de loi organique déposées à son nom pour instaurer la proportionnelle"
+            }
+          },
+          "acte": {
+            "texte": "Scrutin n°53 du 24 juillet 2017 : motion de rejet préalable qu'il a lui-même déposée contre le projet de loi pour la confiance dans la vie publique. Il a voté pour. Motion rejetée par 205 voix contre 23, et 10 abstentions.",
+            "niveau": "national (Assemblée)",
+            "source": "https://2017-2022.nosdeputes.fr/15/scrutin/53",
+            "nature": "vote",
+            "date": "24 juillet 2017"
+          },
+          "effet": {
+            "issue": "rejeté, le texte a continué",
+            "texte": "Une motion de rejet préalable vise à stopper l'examen d'un texte avant tout débat de fond. Rejetée ici par 205 voix contre 23, elle n'a donc rien bloqué : la discussion s'est poursuivie et le projet de loi a été adopté puis promulgué en septembre 2017. Concrètement, cette tentative n'a produit aucun effet juridique. Elle vaut comme prise de position enregistrée, pas comme résultat.",
+            "source": "https://2017-2022.nosdeputes.fr/15/scrutin/53",
+            "resultat": "rejeté",
+            "alignement": "a voté avec la minorité",
+            "suite": "Sa motion visait à stopper l'examen du texte avant tout débat. Rejetée par 205 voix contre 23, elle n'a rien bloqué : la discussion s'est poursuivie et le projet de loi a été adopté puis promulgué en septembre 2017.",
+            "loi": "loi promulguée en septembre 2017",
+            "voie": "vote ordinaire, motion préalable rejetée",
+            "quinquennat": "La proportionnelle qu'il défendait dès 2017 est revenue dans le débat après les législatives de 2024, où aucune majorité absolue n'a émergé, sans qu'aucun texte n'aboutisse à ce jour."
+          }
+        }
+      ],
+      "sources": [
+        "https://2017-2022.nosdeputes.fr/jean-luc-melenchon",
+        "https://2017-2022.nosdeputes.fr/15/scrutin/53",
+        "https://lcp.fr/actualites/loi-climat-l-assemblee-nationale-adopte-le-texte-en-premiere-lecture-64120",
+        "https://www.publicsenat.fr/actualites/politique/jean-luc-melenchon-quitte-l-assemblee-retour-sur-trente-ans-de-mandats",
+        "https://www.europe1.fr/dossiers/jean-luc-melenchon",
+        "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon"
+      ],
+      "maj": "2026-07-20",
+      "assiduite": {
+        "taux": 98,
+        "moyenne": 91,
+        "base": "votes solennels à l'Assemblée nationale, 15e législature, mandat clos en 2022",
+        "loyaute": "",
+        "note": "Chiffre historique : il n'a plus de mandat depuis juin 2022, donc plus de taux de participation actuel.",
+        "source": "https://datan.fr/deputes/bouches-du-rhone-13/depute_jeanluc-melenchon",
+        "type": "sans_objet",
+        "autrement": {
+          "titre": "Engagement mesuré autrement",
+          "texte": "Sans mandat depuis juin 2022, il ne produit plus aucun vote. Ce qui reste mesurable, et vérifiable : sa direction de La France insoumise et sa coprésidence de l'Institut La Boétie, ses prises de position publiques datées, et ses résultats électoraux, avec trois candidatures présidentielles en 2012, 2017 et 2022. Son taux historique de 98 % reste affiché ci-dessus comme repère du passé, pas comme mesure d'aujourd'hui.",
+          "source": "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon"
+        }
+      },
+      "synthese": {
+        "texte": "Point de lecture essentiel : sur le quinquennat 2022-2027, il n'a produit aucun vote. Son mandat de député des Bouches-du-Rhône s'achève le 21 juin 2022 et il ne s'est pas représenté, ce qui fait de lui le seul des sept à n'avoir exercé aucune fonction élective pendant toute la période. Son relevé parlementaire appartient donc à la législature précédente, où il participait à 98 % des scrutins solennels pour une moyenne de 91 %, et où il avait déposé en avril 2021 une proposition de loi et une proposition de loi organique pour instaurer la proportionnelle, et fait rejeter en juillet 2017 sa motion de rejet préalable contre la loi sur la confiance dans la vie publique. Depuis 2022, son action se lit uniquement dans la direction de La France insoumise, la coprésidence de l'Institut La Boétie, et ses prises de position publiques. La proportionnelle qu'il défendait est d'ailleurs revenue dans le débat après les législatives de 2024, sans qu'aucun texte n'aboutisse.",
+        "cle": "Une influence exercée hors des institutions : aucune voix au Parlement pendant tout le quinquennat, un poids entièrement porté par le mouvement."
+      }
+    },
+    {
+      "slug": "marine-tondelier",
+      "nom": "Marine Tondelier",
+      "bord": "gauche écologiste",
+      "parti": "Les Écologistes",
+      "statut": "à confirmer sur source primaire",
+      "parcours": [
+        {
+          "periode": "depuis 2014",
+          "fonction": "Conseillère municipale d'opposition à Hénin-Beaumont, face au maire Rassemblement national Steeve Briois. Conduit une liste aux municipales de 2020. Siège également au conseil communautaire d'Hénin-Carvin",
+          "niveau": "commune",
+          "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier"
+        },
+        {
+          "periode": "depuis 2021",
+          "fonction": "Conseillère régionale des Hauts-de-France",
+          "niveau": "région",
+          "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier"
+        },
+        {
+          "periode": "depuis décembre 2022",
+          "fonction": "Secrétaire nationale d'Europe Écologie Les Verts, élue le 10 décembre 2022 en succédant à Julien Bayou, réélue en avril 2025. Sur sa proposition, le mouvement est renommé Les Écologistes en 2023",
+          "niveau": "mouvement",
+          "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier"
+        },
+        {
+          "periode": "2012, 2017, 2022",
+          "fonction": "Candidate aux législatives dans la 11e circonscription du Pas-de-Calais, face à Marine Le Pen. Battue au second tour de 2022 avec 38,97 % des voix",
+          "niveau": "candidature non élue",
+          "source": "https://fr.wikipedia.org/wiki/Marine_Le_Pen"
+        },
+        {
+          "periode": "2019",
+          "fonction": "Candidate aux européennes en 74e position sur la liste conduite par Yannick Jadot. Non élue",
+          "niveau": "candidature non élue",
+          "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier"
+        }
+      ],
+      "ou_lire_le_bilan": "Cas de lecture important : elle n'a jamais été députée, sénatrice ni eurodéputée. Il n'existe donc aucun relevé de votes national ou européen à son nom. Son bilan se lit uniquement dans les délibérations du conseil municipal d'Hénin-Beaumont depuis 2014, celles du conseil régional des Hauts-de-France depuis 2021, et dans ses choix de direction à la tête des Écologistes depuis décembre 2022. À vérifier : les municipales des 15 et 22 mars 2026 ont pu modifier son mandat local.",
+      "positions": [
+        {
+          "theme": "energie_climat",
+          "position": {
+            "texte": "L'écologie présentée comme condition du progrès et indissociable de la justice sociale, articulée à des sujets concrets : pouvoir d'achat, logement, santé, transports, emploi.",
+            "source": "https://marinetondelier.fr/marine-tondelier",
+            "contexte": {
+              "type": "profession de foi",
+              "date": "en ligne, consultée en 2026",
+              "ou": "Son site personnel, page de présentation politique"
+            }
+          },
+          "acte": {
+            "texte": "Aucun vote national ou européen à son nom, faute de mandat parlementaire. Les actes vérifiables se trouvent dans les délibérations du conseil régional des Hauts-de-France depuis 2021, à extraire des comptes rendus officiels de la collectivité.",
+            "niveau": "région",
+            "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier",
+            "nature": "aucun",
+            "date": ""
+          },
+          "effet": {
+            "issue": "aucun effet législatif",
+            "texte": "N'ayant jamais détenu de mandat parlementaire, elle ne peut par construction produire aucun effet sur une loi nationale ou européenne. Son pouvoir d'action se limite aux délibérations régionales et municipales, dont la portée est locale. C'est une information en soi : sur les sujets nationaux, son bilan se juge sur des propositions, pas sur des résultats.",
+            "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier",
+            "resultat": "sans vote",
+            "alignement": "sans objet",
+            "suite": "Aucun mandat parlementaire, donc aucun vote ni aucun effet possible sur une loi nationale ou européenne.",
+            "loi": "sans objet",
+            "voie": "aucun mandat parlementaire",
+            "quinquennat": "Son parti a participé au Nouveau Front populaire lors des législatives de 2024, coalition arrivée en tête au second tour sans obtenir de majorité absolue."
+          }
+        },
+        {
+          "theme": "institutions_democratie",
+          "position": {
+            "texte": "Se présente comme élue d'opposition au Rassemblement national depuis 2014 et a participé à l'union de la gauche au sein du Nouveau Front populaire lors des législatives de 2024.",
+            "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier",
+            "contexte": {
+              "type": "congrès de parti",
+              "date": "10 décembre 2022",
+              "ou": "Congrès d'Europe Écologie Les Verts, élection au secrétariat national devant cinq autres candidates"
+            }
+          },
+          "acte": {
+            "texte": "Élue au congrès de son parti le 10 décembre 2022 après un premier tour où elle réunit près de 47 % des voix des adhérents, devant cinq autres candidates. Réélue en avril 2025. Il s'agit d'une élection interne à un parti, et non d'un mandat public.",
+            "niveau": "mouvement",
+            "source": "https://france3-regions.franceinfo.fr/hauts-de-france/pas-calais/henin-beaumont/portrait-marine-tondelier-de-la-mairie-d-henin-beaumont-a-la-tete-du-parti-ecologiste-2672660.html",
+            "nature": "action",
+            "date": "10 décembre 2022"
+          },
+          "effet": {
+            "issue": "effet interne au parti",
+            "texte": "Cette élection ne crée aucune norme et n'engage que son mouvement. Son effet concret : elle dirige la ligne du parti depuis décembre 2022, et l'a fait renommer Les Écologistes en 2023. Cela pèse sur les investitures et les alliances, comme la participation au Nouveau Front populaire en 2024, mais pas sur la loi.",
+            "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier",
+            "resultat": "sans vote",
+            "alignement": "sans objet",
+            "suite": "Élection interne à un parti : ne crée aucune norme. Effet réel mais indirect, sur les investitures et les alliances.",
+            "loi": "sans objet",
+            "voie": "élection interne à un parti",
+            "quinquennat": "La séquence 2024 a fait d'elle une figure nationale sans mandat parlementaire, situation qui distingue nettement son cas des autres candidats documentés ici."
+          }
+        }
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Marine_Tondelier",
+        "https://marinetondelier.fr/marine-tondelier",
+        "https://france3-regions.franceinfo.fr/hauts-de-france/pas-calais/henin-beaumont/portrait-marine-tondelier-de-la-mairie-d-henin-beaumont-a-la-tete-du-parti-ecologiste-2672660.html",
+        "https://npdc.lesecologistes.fr/trombinoscope/yFpeWq1OWCCQfPSIHygq1/marine-tondelier"
+      ],
+      "maj": "2026-07-20",
+      "assiduite": {
+        "taux": null,
+        "moyenne": null,
+        "base": "aucun mandat parlementaire",
+        "loyaute": "",
+        "note": "Sans objet. N'ayant jamais été députée, sénatrice ni eurodéputée, aucun taux de participation à des votes de loi n'existe à son nom. L'équivalent serait son assiduité au conseil régional des Hauts-de-France et au conseil municipal d'Hénin-Beaumont, à extraire des comptes rendus de ces collectivités.",
+        "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier",
+        "type": "sans_objet",
+        "autrement": {
+          "titre": "Engagement mesuré autrement",
+          "texte": "Son activité se mesure à trois endroits, tous documentés publiquement. Au conseil régional des Hauts-de-France depuis 2021 et au conseil municipal d'Hénin-Beaumont depuis 2014, où présences et prises de parole figurent dans les comptes rendus de séance, à extraire auprès de ces collectivités. Et à la tête des Écologistes, où sa légitimité interne est chiffrée : élue en décembre 2022 avec près de 47 % des voix des adhérents au premier tour face à cinq autres candidates, puis réélue en avril 2025.",
+          "source": "https://fr.wikipedia.org/wiki/Marine_Tondelier"
+        }
+      },
+      "synthese": {
+        "texte": "Elle est, avec Jean-Luc Mélenchon, la seule à n'avoir aucun vote national à son nom, mais pour une raison différente : elle n'a jamais été députée, sénatrice ni eurodéputée. Sa notoriété nationale se construit donc entièrement hors du Parlement. Élue secrétaire nationale d'Europe Écologie Les Verts le 10 décembre 2022, avec près de 47 % des voix des adhérents au premier tour face à cinq autres candidates, elle fait renommer le mouvement Les Écologistes en 2023 et est réélue en avril 2025. Elle participe en 2024 à l'union de la gauche au sein du Nouveau Front populaire, coalition arrivée en tête au second tour des législatives sans majorité absolue. Ses mandats effectifs restent locaux : conseillère municipale d'opposition à Hénin-Beaumont depuis 2014, face à un maire Rassemblement national, et conseillère régionale des Hauts-de-France depuis 2021. Elle s'est présentée trois fois aux législatives dans la onzième circonscription du Pas-de-Calais face à Marine Le Pen, battue au second tour de 2022 avec 38,97 % des voix.",
+        "cle": "Une influence de mouvement et d'ancrage local : sur les sujets nationaux, son bilan se juge sur des propositions et des alliances, pas sur des résultats législatifs."
+      }
+    },
+    {
+      "slug": "edouard-philippe",
+      "nom": "Édouard Philippe",
+      "bord": "centre droit",
+      "parti": "Horizons",
+      "statut": "déclarée le 3 septembre 2024",
+      "parcours": [
+        {
+          "periode": "depuis 2001",
+          "fonction": "Conseiller municipal du Havre, adjoint au maire Antoine Rufenacht",
+          "niveau": "commune",
+          "source": "https://lehavre.fr/ma-ville/le-conseil-municipal/les-elus/edouard-philippe"
+        },
+        {
+          "periode": "2010-2017, puis depuis 2020",
+          "fonction": "Maire du Havre. Devient maire en 2010 après la démission d'Antoine Rufenacht, réélu en 2014 et 2020, puis réélu le 22 mars 2026 avec environ 47 % des voix et élu maire par le conseil municipal le 28 mars 2026. Préside aussi la communauté urbaine Le Havre Seine Métropole",
+          "niveau": "commune",
+          "source": "https://lehavre.fr/ma-ville/le-conseil-municipal/les-elus/edouard-philippe"
+        },
+        {
+          "periode": "2012-2017",
+          "fonction": "Député de la 7e circonscription de Seine-Maritime, sous l'étiquette UMP devenue Les Républicains",
+          "niveau": "national (Assemblée)",
+          "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-dedouard-philippe/"
+        },
+        {
+          "periode": "15 mai 2017 au 3 juillet 2020",
+          "fonction": "Premier ministre, nommé par Emmanuel Macron. Remplacé par Jean Castex après les municipales de 2020",
+          "niveau": "gouvernement",
+          "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-dedouard-philippe/"
+        },
+        {
+          "periode": "depuis 2021",
+          "fonction": "Fondateur et président du parti Horizons",
+          "niveau": "mouvement",
+          "source": "https://fr.wikipedia.org/wiki/%C3%89douard_Philippe"
+        }
+      ],
+      "ou_lire_le_bilan": "Parcours à trois étages, à lire séparément. Son bilan principal est exécutif : trois ans à Matignon, où l'on juge sur les réformes portées et non sur des votes, puisqu'un Premier ministre n'a pas de relevé de scrutins. S'y ajoutent un relevé de votes de député entre 2012 et 2017, consultable dans l'open data de l'Assemblée, et une gestion municipale du Havre depuis 2010. Élément judiciaire en cours, à mentionner sans préjuger : une enquête a été ouverte en 2024 par le parquet national financier concernant la mairie du Havre, et une juge d'instruction a été saisie en 2026. La présomption d'innocence s'applique.",
+      "positions": [
+        {
+          "theme": "travail_social",
+          "position": {
+            "texte": "Objectif affiché d'assouplir le marché du travail, dans une logique de flexibilité et de compétitivité.",
+            "source": "https://www.sondages-presidentielle2027.fr/candidats/edouard-philippe.html",
+            "contexte": {
+              "type": "action gouvernementale",
+              "date": "2017",
+              "ou": "Matignon, réforme du code du travail engagée par ordonnances"
+            }
+          },
+          "acte": {
+            "texte": "En 2017, son gouvernement fait adopter par ordonnances une réforme du code du travail visant à assouplir le marché du travail. Il porte également une réforme de l'assurance chômage. Ces actes relèvent de l'exécutif : ils se jugent sur leur contenu et leurs effets, pas sur un vote personnel.",
+            "niveau": "gouvernement",
+            "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-dedouard-philippe/",
+            "nature": "action",
+            "date": "2017"
+          },
+          "effet": {
+            "issue": "appliqué par ordonnances",
+            "texte": "Une ordonnance permet au gouvernement de légiférer directement, après habilitation du Parlement : l'effet est immédiat et ne dépend pas d'un vote article par article. Ces textes de 2017 sont entrés en application et ont modifié le code du travail, notamment sur la représentation du personnel et le règlement des litiges aux prud'hommes. Concrètement, ce sont des règles que salariés et employeurs appliquent aujourd'hui.",
+            "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-dedouard-philippe/",
+            "resultat": "appliqué sans vote article par article",
+            "alignement": "sans objet",
+            "suite": "Voie des ordonnances : le Parlement habilite le gouvernement, qui légifère ensuite directement. Les textes de 2017 sont entrés en vigueur et s'appliquent.",
+            "loi": "ordonnances en vigueur",
+            "voie": "ordonnances, article 38 de la Constitution",
+            "quinquennat": "Ces ordonnances datent du premier quinquennat, quand le gouvernement disposait d'une majorité absolue. Depuis 2022, une réforme de cette ampleur passerait difficilement par la même voie."
+          }
+        },
+        {
+          "theme": "economie_fiscalite",
+          "position": {
+            "texte": "Positionnement affiché entre droite et macronisme, orienté vers les réformes économiques, l'Europe et la stabilité institutionnelle.",
+            "source": "https://www.sondages-presidentielle2027.fr/candidats/edouard-philippe.html",
+            "contexte": {
+              "type": "action gouvernementale",
+              "date": "2018 à 2020",
+              "ou": "Matignon, réformes de la SNCF et de l'assurance chômage"
+            }
+          },
+          "acte": {
+            "texte": "Réformes conduites pendant son mandat de Premier ministre : transformation de la SNCF, réforme de l'assurance chômage, puis gestion de la crise sanitaire du Covid-19 jusqu'à son départ en juillet 2020.",
+            "niveau": "gouvernement",
+            "source": "https://www.sondages-presidentielle2027.fr/candidats/edouard-philippe.html",
+            "nature": "action",
+            "date": "2018 à 2020"
+          },
+          "effet": {
+            "issue": "réformes menées à terme",
+            "texte": "Ces réformes ont abouti pendant son mandat : la SNCF a été transformée et l'assurance chômage révisée. Effet concret pour un présidentiable : il peut revendiquer des résultats, mais il en porte aussi le bilan, y compris contesté. À la différence d'un député, il n'existe aucun vote personnel à lui opposer, seulement des politiques.",
+            "source": "https://www.sondages-presidentielle2027.fr/candidats/edouard-philippe.html",
+            "resultat": "mené à terme",
+            "alignement": "sans objet",
+            "suite": "Réformes abouties pendant son mandat : transformation de la SNCF et révision de l'assurance chômage. Il en revendique les résultats et en porte le bilan, sans qu'aucun vote personnel ne lui soit attribuable.",
+            "loi": "réformes en vigueur",
+            "voie": "voie législative et réglementaire",
+            "quinquennat": "Ces réformes ont été conduites avec une majorité absolue à l'Assemblée, condition qui n'existe plus depuis juin 2022."
+          }
+        },
+        {
+          "theme": "institutions_democratie",
+          "position": {
+            "texte": "Il a pris ses distances avec Emmanuel Macron en critiquant la dissolution décidée en juin 2024, et a déclaré sa candidature à la présidentielle le 3 septembre 2024, dans la crise politique qui a suivi.",
+            "source": "https://www.publicsenat.fr/dossier/edouard-philippe-2",
+            "contexte": {
+              "type": "déclaration publique",
+              "date": "3 septembre 2024",
+              "ou": "Annonce de sa candidature à la présidentielle, après avoir critiqué la dissolution de juin 2024"
+            }
+          },
+          "acte": {
+            "texte": "Aucun vote personnel possible : il n'a plus de mandat parlementaire depuis 2017. Son levier institutionnel passe par les députés de son parti Horizons, qui se sont opposés à la suspension de la réforme des retraites de 2023.",
+            "niveau": "mouvement",
+            "source": "https://fr.wikipedia.org/wiki/%C3%89douard_Philippe",
+            "nature": "aucun",
+            "date": "12 novembre 2025"
+          },
+          "effet": {
+            "issue": "opposition non suivie",
+            "texte": "La suspension de la réforme des retraites a été adoptée par l'Assemblée nationale le 12 novembre 2025, par 255 voix contre 146. La position défendue par son camp n'a donc pas prévalu. Précision de méthode : ce vote est celui de députés de son parti, pas le sien. Nous le signalons comme position de mouvement, et non comme acte personnel.",
+            "source": "https://datan.fr/deputes/pas-de-calais-62/depute_marine-lepen",
+            "resultat": "adopté",
+            "alignement": "son camp a voté contre le résultat",
+            "suite": "La suspension de la réforme des retraites a été adoptée le 12 novembre 2025 par 255 voix contre 146, malgré l'opposition des députés Horizons. La position de son camp n'a pas prévalu. Précision : ce vote est celui de députés de son parti, pas le sien, puisqu'il n'a plus de mandat parlementaire depuis 2017.",
+            "loi": "suspension adoptée le 12 novembre 2025",
+            "voie": "vote ordinaire",
+            "quinquennat": "Il a critiqué publiquement la dissolution de juin 2024 et déclaré sa candidature dans la crise politique qui a suivi."
+          }
+        }
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/%C3%89douard_Philippe",
+        "https://lehavre.fr/ma-ville/le-conseil-municipal/les-elus/edouard-philippe",
+        "https://www.publicsenat.fr/dossier/edouard-philippe-2",
+        "https://www.sondages-presidentielle2027.fr/candidats/edouard-philippe.html",
+        "https://election-presidentielle-francaise-2027.fr/la-biographie-dedouard-philippe/"
+      ],
+      "maj": "2026-07-20",
+      "assiduite": {
+        "taux": null,
+        "moyenne": null,
+        "base": "Assemblée nationale, 14e législature",
+        "loyaute": "",
+        "note": "Son seul mandat parlementaire court de 2012 à 2017 : un taux existe potentiellement dans l'historique de Datan, qui remonte à la 14e législature, mais il reste à extraire. Depuis, ses fonctions sont exécutives, donc sans votes.",
+        "source": "https://datan.fr/statistiques/deputes-participation",
+        "type": "sans_objet",
+        "autrement": {
+          "titre": "Engagement mesuré autrement",
+          "texte": "Un exécutif local se juge sur la gestion et sur le renouvellement de sa légitimité par les urnes. Deux éléments chiffrés ici : réélu maire du Havre le 22 mars 2026 avec environ 47 % des voix pour un troisième mandat, puis élu maire par le conseil municipal le 28 mars 2026. Il préside également la communauté urbaine Le Havre Seine Métropole. Les délibérations et budgets de la ville sont publics et constituent la trace vérifiable de son action.",
+          "source": "https://lehavre.fr/ma-ville/le-conseil-municipal/les-elus/edouard-philippe"
+        }
+      },
+      "synthese": {
+        "texte": "Son bilan se joue sur deux terrains distincts, et aucun n'est parlementaire. D'un côté l'exécutif local : maire du Havre, réélu le 22 mars 2026 avec environ 47 % des voix pour un troisième mandat, puis élu maire par le conseil municipal le 28 mars, président par ailleurs de la communauté urbaine Le Havre Seine Métropole. De l'autre la direction d'un parti, Horizons, fondé en 2021. N'ayant plus de mandat parlementaire depuis 2017, il ne vote aucun texte : son poids à l'Assemblée passe par ses députés. Ceux-ci ont pesé deux fois de façon documentée. Le 30 octobre 2025, leurs voix contribuent à faire adopter la résolution du Rassemblement national sur les accords franco-algériens, à une voix près. Le 12 novembre 2025, ils s'opposent à la suspension de la réforme des retraites, adoptée malgré eux par 255 voix contre 146. Politiquement, il critique la dissolution de juin 2024 et déclare sa candidature le 3 septembre 2024, dans la crise qui suit. Ses réformes les plus citées, code du travail par ordonnances, SNCF, assurance chômage, appartiennent au quinquennat précédent, quand la majorité absolue existait encore.",
+        "cle": "Un bilan de gestion et un relais parlementaire indirect : il pèse par son parti, jamais par sa propre voix."
+      }
+    },
+    {
+      "slug": "marine-le-pen",
+      "nom": "Marine Le Pen",
+      "bord": "extrême droite",
+      "parti": "Rassemblement national",
+      "statut": "déclarée le 7 juillet 2026",
+      "parcours": [
+        {
+          "periode": "1998-2004, 2004-2010, 2010-2015, 2015-2021",
+          "fonction": "Conseillère régionale, successivement en Nord-Pas-de-Calais, en Île-de-France, à nouveau en Nord-Pas-de-Calais, puis dans les Hauts-de-France",
+          "niveau": "région",
+          "source": "https://en.wikipedia.org/wiki/Marine_Le_Pen"
+        },
+        {
+          "periode": "2008-2011",
+          "fonction": "Conseillère municipale d'Hénin-Beaumont",
+          "niveau": "commune",
+          "source": "https://en.wikipedia.org/wiki/Marine_Le_Pen"
+        },
+        {
+          "periode": "juillet 2004 à juin 2017",
+          "fonction": "Députée au Parlement européen, d'abord pour l'Île-de-France puis pour le Nord-Ouest. Co-présidente du groupe Europe des nations et des libertés de 2015 à 2017",
+          "niveau": "européen",
+          "source": "https://www.touteleurope.eu/vie-politique-des-etats-membres/proces-des-assistants-du-rn-marine-le-pen-condamnee-en-appel-mais-eligible-a-l-election-presidentielle-2027/"
+        },
+        {
+          "periode": "depuis le 18 juin 2017",
+          "fonction": "Députée de la 11e circonscription du Pas-de-Calais. Réélue le 19 juin 2022 avec 61,03 % des voix face à Marine Tondelier. Présidente du groupe Rassemblement national à l'Assemblée depuis juin 2022",
+          "niveau": "national (Assemblée)",
+          "source": "https://fr.wikipedia.org/wiki/Marine_Le_Pen"
+        },
+        {
+          "periode": "16 janvier 2011 au 12 septembre 2021",
+          "fonction": "Présidente du Front national devenu Rassemblement national, succédant à Jean-Marie Le Pen puis remplacée par Jordan Bardella",
+          "niveau": "mouvement",
+          "source": "https://en.wikipedia.org/wiki/Marine_Le_Pen"
+        }
+      ],
+      "ou_lire_le_bilan": "C'est le parcours le plus fourni en votes traçables des quatre : treize ans au Parlement européen (2004-2017), puis un mandat de députée en cours depuis 2017, les deux disposant d'un relevé de scrutins public. Élément judiciaire, à énoncer précisément : le 7 juillet 2026, la cour d'appel de Paris l'a condamnée pour détournement de fonds publics dans l'affaire des assistants du Front national au Parlement européen, à 100 000 euros d'amende et trois ans de prison dont deux avec sursis, l'année ferme étant aménageable sous bracelet électronique. La peine d'inéligibilité de 45 mois, dont 30 avec sursis, laisse 15 mois fermes déjà purgés au 30 juin 2026 du fait de l'exécution provisoire prononcée en première instance le 31 mars 2025. Elle est donc éligible pour le scrutin des 18 avril et 2 mai 2027, et a formé un pourvoi en cassation.",
+      "positions": [
+        {
+          "theme": "institutions_democratie",
+          "position": {
+            "texte": "Le Rassemblement national avait posé des lignes rouges sur le budget et menacé de censurer si elles n'étaient pas retenues.",
+            "source": "https://www.publicsenat.fr/actualites/parlementaire/le-gouvernement-de-michel-barnier-renverse-apres-ladoption-de-la-motion-de-censure-du-nfp",
+            "contexte": {
+              "type": "déclaration publique",
+              "date": "décembre 2024",
+              "ou": "Lignes rouges posées publiquement par le Rassemblement national sur le budget, avant le recours au 49.3"
+            }
+          },
+          "acte": {
+            "nature": "vote",
+            "date": "4 décembre 2024",
+            "texte": "Les députés du Rassemblement national ont voté la motion de censure déposée par le Nouveau Front populaire contre le gouvernement de Michel Barnier, après que celui-ci eut engagé sa responsabilité par le 49.3 sur le budget de la Sécurité sociale pour 2025.",
+            "niveau": "national (Assemblée)",
+            "source": "https://www.publicsenat.fr/actualites/parlementaire/le-gouvernement-de-michel-barnier-renverse-apres-ladoption-de-la-motion-de-censure-du-nfp"
+          },
+          "effet": {
+            "issue": "gouvernement renversé",
+            "resultat": "adopté",
+            "alignement": "a voté avec la majorité",
+            "loi": "budget de la Sécurité sociale caduc, gouvernement démissionnaire",
+            "voie": "motion de censure, après un 49.3",
+            "texte": "Motion adoptée par 331 voix, au-delà des 288 requises, par les voix de la gauche et du Rassemblement national réunies. C'est la deuxième fois seulement qu'un gouvernement est renversé sous la Ve République, soixante-deux ans après 1962, et la première fois après un engagement de responsabilité.",
+            "suite": "Michel Barnier a dû démissionner, son gouvernement devenant le plus court de la Ve République. Le texte budgétaire adopté par 49.3 est tombé avec lui. Point de méthode important : dans un vote de censure, seules les voix favorables sont décomptées. Ceux qui s'y opposent ou s'abstiennent ne votent pas, et sont donc indiscernables les uns des autres.",
+            "quinquennat": "Séquence caractéristique de la fin du quinquennat : après la dissolution de juin 2024 et la perte de la majorité, quatre Premiers ministres se sont succédé, le recours au 49.3 s'est banalisé sur les budgets, et le Rassemblement national comme la gauche ont utilisé la censure comme levier.",
+            "source": "https://lcp.fr/actualites/le-gouvernement-de-michel-barnier-censure-au-terme-d-une-journee-historique-a-l"
+          }
+        },
+        {
+          "theme": "immigration",
+          "position": {
+            "texte": "Ligne portée de longue date par son parti sur la restriction de l'immigration.",
+            "source": "https://datan.fr/deputes/pas-de-calais-62/depute_marine-lepen",
+            "contexte": {
+              "type": "déclaration publique",
+              "date": "30 octobre 2025",
+              "ou": "À la sortie de l'hémicycle, après l'adoption de la résolution de son groupe"
+            }
+          },
+          "acte": {
+            "texte": "Le 30 octobre 2025, lors de la journée réservée à son groupe, elle a voté pour la proposition de résolution du Rassemblement national visant à dénoncer les accords franco-algériens de 1968, qui accordent aux ressortissants algériens un régime spécifique de séjour et de circulation.",
+            "niveau": "national (Assemblée)",
+            "source": "https://lcp.fr/actualites/denonciation-des-accords-franco-algeriens-de-1968-un-texte-du-rn-adopte-a-une-voix-pres",
+            "nature": "vote",
+            "date": "30 octobre 2025"
+          },
+          "effet": {
+            "issue": "adopté à une voix près",
+            "resultat": "adopté",
+            "alignement": "a voté avec la majorité",
+            "texte": "Cas d'école du poids réel d'un vote. Le texte est passé par 185 voix contre 184, une seule voix d'écart, avec le renfort des députés Les Républicains et Horizons. Une résolution identique avait pourtant été rejetée le 7 décembre 2023 sous la législature précédente : même texte, résultat inverse, parce que les rapports de force et les présences avaient changé.",
+            "suite": "Adopté ne veut pas dire appliqué. Une résolution n'a aucune valeur législative ni contraignante pour le gouvernement : dénoncer un accord international relève de l'exécutif. Pour aller plus loin, il faudrait qu'un groupe du Sénat s'en empare, puis que le gouvernement agisse. La portée est donc politique et symbolique, pas juridique.",
+            "source": "https://lcp.fr/actualites/denonciation-des-accords-franco-algeriens-de-1968-un-texte-du-rn-adopte-a-une-voix-pres",
+            "loi": "adoptée mais non contraignante",
+            "voie": "résolution, article 34-1 de la Constitution",
+            "quinquennat": "Premier texte du Rassemblement national jamais adopté à l'Assemblée, rendu possible par l'absence de majorité depuis 2024 et par des appoints venus de la droite et du centre droit."
+          }
+        }
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Marine_Le_Pen",
+        "https://en.wikipedia.org/wiki/Marine_Le_Pen",
+        "https://www.touteleurope.eu/vie-politique-des-etats-membres/proces-des-assistants-du-rn-marine-le-pen-condamnee-en-appel-mais-eligible-a-l-election-presidentielle-2027/",
+        "https://www.ici.fr/ile-de-france/paris-75/paris/marine-le-pen-est-candidate-a-l-election-presidentielle-de-2027-5300293",
+        "https://info.fr/marine-le-pen-condamnee-appel-eligible-2027-menace-judiciaire/",
+        "https://www.france24.com/fr/france/20260702-proces-appel-marine-le-pen-quels-scenarios-possibles-7-juillet-ineligibilite-rassemblement-national-eurodeputes-fn-jugement",
+        "https://lcp.fr/actualites/denonciation-des-accords-franco-algeriens-de-1968-un-texte-du-rn-adopte-a-une-voix-pres"
+      ],
+      "maj": "2026-07-20",
+      "assiduite": {
+        "taux": 97,
+        "moyenne": 90,
+        "base": "votes solennels à l'Assemblée nationale, 17e législature, mandat en cours",
+        "loyaute": "Vote sur la même ligne que son groupe dans 100 % des cas, contre 95 % en moyenne.",
+        "note": "Historique : 92 % sur la 16e législature (moyenne 83 %) et 92 % sur la 15e (moyenne 91 %). Neuf ans de mandat au total, contre six ans en moyenne.",
+        "source": "https://datan.fr/deputes/pas-de-calais-62/depute_marine-lepen",
+        "type": "votes"
+      },
+      "synthese": {
+        "texte": "Sur ce quinquennat, sa position évolue moins par ses idées que par le poids que lui donne l'arithmétique parlementaire. Réélue députée du Pas-de-Calais en juin 2022 avec 61,03 % des voix, elle prend la présidence du groupe Rassemblement national, fort de 89 élus, puis à nouveau après 2024. Son assiduité est parmi les plus élevées des fiches documentées ici : 92 % des scrutins solennels sur la législature 2022-2024, 97 % depuis, pour une moyenne de 90 %, avec un alignement sur son groupe de 100 %. Deux actes datés marquent sa trajectoire. Le 4 décembre 2024, ses députés votent la motion de censure du Nouveau Front populaire et contribuent à renverser le gouvernement Barnier, deuxième chute d'un gouvernement sous la Ve République. Le 30 octobre 2025, son groupe fait adopter à 185 voix contre 184 une résolution demandant la dénonciation des accords franco-algériens de 1968, premier texte du parti jamais approuvé par l'Assemblée, avec l'appoint des Républicains et d'Horizons. Sur le plan judiciaire, la cour d'appel de Paris l'a condamnée le 7 juillet 2026 tout en la laissant éligible, et elle s'est pourvue en cassation.",
+        "cle": "Une force d'appoint devenue pivot : sans majorité, ses voix décident, que ce soit pour renverser un gouvernement ou faire passer un texte."
+      }
+    },
+    {
+      "slug": "bruno-retailleau",
+      "nom": "Bruno Retailleau",
+      "bord": "droite",
+      "parti": "Les Républicains",
+      "statut": "déclarée le 12 février 2026",
+      "parcours": [
+        {
+          "periode": "6 octobre 1988 au 1er avril 2015",
+          "fonction": "Conseiller général de la Vendée, canton de Mortagne-sur-Sèvre. Premier mandat obtenu à 27 ans, dans l'entourage de Philippe de Villiers",
+          "niveau": "département",
+          "source": "https://www.interieur.gouv.fr/en/node/3994"
+        },
+        {
+          "periode": "27 novembre 1994 au 21 avril 1997",
+          "fonction": "Député de la 4e circonscription de la Vendée",
+          "niveau": "national (Assemblée)",
+          "source": "https://www.interieur.gouv.fr/en/node/3994"
+        },
+        {
+          "periode": "28 mars 1998 au 2 avril 2004",
+          "fonction": "Vice-président du conseil régional des Pays de la Loire",
+          "niveau": "région",
+          "source": "https://www.interieur.gouv.fr/en/node/3994"
+        },
+        {
+          "periode": "31 octobre 2010 au 2 avril 2015",
+          "fonction": "Président du conseil général de la Vendée, succédant à Philippe de Villiers",
+          "niveau": "département",
+          "source": "https://www.interieur.gouv.fr/en/node/3994"
+        },
+        {
+          "periode": "janvier 2016 à septembre 2017",
+          "fonction": "Président du conseil régional des Pays de la Loire",
+          "niveau": "région",
+          "source": "https://www.info.gouv.fr/personnalite/bruno-retailleau"
+        },
+        {
+          "periode": "7 octobre 2014 au 30 septembre 2024",
+          "fonction": "Président du groupe UMP puis Les Républicains au Sénat",
+          "niveau": "national (Sénat)",
+          "source": "https://www.interieur.gouv.fr/en/node/3994"
+        },
+        {
+          "periode": "21 septembre 2024 au 12 octobre 2025",
+          "fonction": "Ministre de l'Intérieur, puis ministre d'État à partir de décembre 2024, successivement dans les gouvernements Barnier, Bayrou et Lecornu. Succède à Gérald Darmanin",
+          "niveau": "gouvernement",
+          "source": "https://fr.wikipedia.org/wiki/Bruno_Retailleau"
+        },
+        {
+          "periode": "depuis le 1er octobre 2004, mandat repris le 13 novembre 2025",
+          "fonction": "Sénateur de la Vendée. Élu en 2004, réélu en 2014 et en 2020. Mandat suspendu du 21 octobre 2024 au 13 novembre 2025 pendant ses fonctions ministérielles, puis repris",
+          "niveau": "national (Sénat)",
+          "source": "https://www.senat.fr/senateur/retailleau_bruno04033b.html"
+        },
+        {
+          "periode": "depuis le 18 mai 2025",
+          "fonction": "Président des Républicains, élu face à Laurent Wauquiez après un premier échec au congrès de 2022 où il avait été battu par Éric Ciotti avec 46,3 % des voix",
+          "niveau": "mouvement",
+          "source": "https://www.publicsenat.fr/dossier/bruno-retailleau-president-des-lr"
+        }
+      ],
+      "ou_lire_le_bilan": "Le plus long parcours d'élu des sept fiches, sur trente-sept ans et quatre niveaux. Son bilan se lit à trois endroits distincts : vingt ans de votes au Sénat, consultables sur NosSénateurs.fr et l'open data du Sénat, une action gouvernementale d'un an à l'Intérieur qui ne laisse aucun relevé de votes, et une gestion exécutive locale à la tête du département puis de la région. Détail de méthode : un parlementaire nommé au gouvernement voit son mandat suspendu, pas supprimé. C'est pourquoi il redevient sénateur en novembre 2025 sans nouvelle élection.",
+      "positions": [
+        {
+          "theme": "immigration",
+          "position": {
+            "texte": "Le 23 septembre 2024, deux jours après sa nomination à l'Intérieur, il annonce vouloir prendre tous les moyens pour faire baisser l'immigration, et souhaite rétablir le délit de séjour irrégulier, supprimé par une loi du 31 décembre 2012.",
+            "source": "https://fr.wikipedia.org/wiki/Bruno_Retailleau",
+            "contexte": {
+              "type": "déclaration publique",
+              "date": "23 septembre 2024",
+              "ou": "Deux jours après sa nomination au ministère de l'Intérieur"
+            }
+          },
+          "acte": {
+            "texte": "Comme ministre, action diplomatique plutôt que législative : déplacement au Maroc les 13 et 14 avril 2025 pour obtenir davantage de laissez-passer consulaires, documents nécessaires à l'exécution des obligations de quitter le territoire français.",
+            "niveau": "gouvernement",
+            "source": "https://fr.allafrica.com/stories/202504140286.html",
+            "nature": "action",
+            "date": "13 et 14 avril 2025"
+          },
+          "effet": {
+            "issue": "effet administratif mesuré",
+            "texte": "Un ministre de l'Intérieur agit par la négociation et la circulaire, pas par le vote. L'effet est ici chiffré : le nombre de laissez-passer consulaires délivrés par le Maroc a progressé de 93 % entre janvier et février 2025 par rapport à la même période de l'année précédente. À noter, un laissez-passer permet une expulsion, il ne la garantit pas. Et le rétablissement du délit de séjour irrégulier, lui, suppose une loi : cela relève du Parlement, pas du ministre.",
+            "source": "https://fr.allafrica.com/stories/202504140286.html",
+            "resultat": "effet administratif",
+            "alignement": "sans objet",
+            "suite": "Action diplomatique et non législative. Effet chiffré : hausse de 93 % des laissez-passer consulaires délivrés par le Maroc entre janvier et février 2025. Un laissez-passer permet une expulsion sans la garantir. Rétablir le délit de séjour irrégulier suppose en revanche une loi, donc un vote du Parlement.",
+            "loi": "aucun texte",
+            "voie": "action administrative et diplomatique",
+            "quinquennat": "Son passage à l'Intérieur s'inscrit dans une période où quatre gouvernements se sont succédé en un an, limitant la portée des réformes engagées."
+          }
+        },
+        {
+          "theme": "institutions_democratie",
+          "position": {
+            "texte": "Positionnement conservateur revendiqué. Après son élection à la tête des Républicains en mai 2025, il fixe comme objectifs les municipales puis la présidentielle.",
+            "source": "https://www.publicsenat.fr/dossier/bruno-retailleau-president-des-lr",
+            "contexte": {
+              "type": "congrès de parti",
+              "date": "18 mai 2025",
+              "ou": "Élection à la présidence des Républicains face à Laurent Wauquiez, objectifs fixés devant sa formation"
+            }
+          },
+          "acte": {
+            "nature": "action",
+            "date": "4 décembre 2024",
+            "texte": "Ministre de l'Intérieur du gouvernement Barnier au moment où celui-ci a été renversé par la motion de censure. Un ministre ne vote pas : il subit le vote de l'Assemblée et quitte ses fonctions avec le gouvernement.",
+            "niveau": "gouvernement",
+            "source": "https://www.publicsenat.fr/actualites/parlementaire/le-gouvernement-de-michel-barnier-renverse-apres-ladoption-de-la-motion-de-censure-du-nfp"
+          },
+          "effet": {
+            "issue": "gouvernement renversé",
+            "resultat": "adopté",
+            "alignement": "sans objet",
+            "loi": "gouvernement démissionnaire",
+            "voie": "motion de censure, après un 49.3",
+            "texte": "Illustration directe de la règle : le gouvernement est responsable devant l'Assemblée, pas l'inverse. Aucun de ses ministres n'avait de voix à faire valoir dans ce scrutin.",
+            "suite": "Il a été reconduit à l'Intérieur dans les gouvernements suivants jusqu'en octobre 2025, puis a repris son mandat de sénateur le 13 novembre 2025.",
+            "quinquennat": "Son parcours montre le va-et-vient permis par les institutions : sénateur, puis ministre avec mandat suspendu, puis sénateur de nouveau, sans jamais repasser devant les électeurs.",
+            "source": "https://www.publicsenat.fr/actualites/parlementaire/le-gouvernement-de-michel-barnier-renverse-apres-ladoption-de-la-motion-de-censure-du-nfp"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.senat.fr/senateur/retailleau_bruno04033b.html",
+        "https://www.interieur.gouv.fr/en/node/3994",
+        "https://www.info.gouv.fr/personnalite/bruno-retailleau",
+        "https://fr.wikipedia.org/wiki/Bruno_Retailleau",
+        "https://www.publicsenat.fr/dossier/bruno-retailleau-president-des-lr",
+        "https://www.hatvp.fr/pages_nominatives/retailleau-bruno.html",
+        "https://www.ina.fr/ina-eclaire-actu/bruno-retailleau-ministre-portrait-parcours-politique-vendee-puy-du-fou"
+      ],
+      "maj": "2026-07-20",
+      "assiduite": {
+        "taux": null,
+        "moyenne": null,
+        "base": "Sénat",
+        "loyaute": "",
+        "note": "À ne pas confondre avec une absence de votes : sénateur en exercice, il en produit bien. Le chiffre manque seulement parce que Datan couvre l'Assemblée et non le Sénat. Il est à extraire de NosSénateurs.fr et de l'open data du Sénat. Précaution supplémentaire : son mandat ayant été suspendu du 21 octobre 2024 au 13 novembre 2025 pendant ses fonctions ministérielles, toute comparaison brute sur cette période serait faussée.",
+        "source": "https://www.senat.fr/senateur/retailleau_bruno04033b.html",
+        "type": "a_extraire",
+        "autrement": {
+          "titre": "En attendant, ce qui est mesurable",
+          "texte": "Vingt ans de mandat sénatorial et dix ans à la présidence du groupe Les Républicains au Sénat, d'octobre 2014 à septembre 2024. Sa légitimité interne est chiffrée : élu président du parti le 18 mai 2025 face à Laurent Wauquiez, avec des scores élevés dans plusieurs fédérations, dont 97,4 % en Vendée. Son année à l'Intérieur, elle, se juge sur l'action menée et non sur des votes.",
+          "source": "https://www.publicsenat.fr/dossier/bruno-retailleau-president-des-lr"
+        }
+      },
+      "synthese": {
+        "texte": "Son quinquennat illustre la circulation permise entre les institutions. Sénateur de la Vendée depuis 2004 et président du groupe Les Républicains au Sénat d'octobre 2014 à septembre 2024, il devient ministre de l'Intérieur le 21 septembre 2024, puis ministre d'État à partir de décembre, successivement dans les gouvernements Barnier, Bayrou et Lecornu, jusqu'en octobre 2025. Son mandat sénatorial est suspendu pendant cette période, non supprimé, et il le reprend le 13 novembre 2025 sans repasser devant les électeurs. Entre-temps, il est élu président des Républicains le 18 mai 2025 face à Laurent Wauquiez, après un premier échec au congrès de 2022. Comme ministre, il n'a aucune voix à faire valoir : le 4 décembre 2024, le gouvernement dont il est membre est renversé par une motion de censure sans qu'il puisse s'y opposer par un vote. Sur l'immigration, il annonce dès le 23 septembre 2024 vouloir faire baisser l'immigration et rétablir le délit de séjour irrégulier, et agit par la voie diplomatique, avec un déplacement au Maroc en avril 2025 suivi d'une hausse de 93 % des laissez-passer consulaires.",
+        "cle": "Un parcours à trois casquettes successives : sénateur, ministre, chef de parti. Son relevé de votes au Sénat reste à extraire pour compléter la lecture."
+      }
+    },
+    {
+      "slug": "gabriel-attal",
+      "nom": "Gabriel Attal",
+      "bord": "centre",
+      "parti": "Renaissance",
+      "statut": "déclarée en 2026, date exacte à confirmer sur source primaire",
+      "parcours": [
+        {
+          "periode": "2012-2017",
+          "fonction": "Membre du cabinet de Marisol Touraine, ministre de la Santé. Militant au Parti socialiste de 2006 à 2016, avant de rejoindre En marche en 2016",
+          "niveau": "non électif",
+          "source": "https://fr.wikipedia.org/wiki/Gabriel_Attal"
+        },
+        {
+          "periode": "octobre 2018 à juillet 2020",
+          "fonction": "Secrétaire d'État auprès du ministre de l'Éducation nationale et de la Jeunesse. À 29 ans, plus jeune membre d'un gouvernement sous la Ve République",
+          "niveau": "gouvernement",
+          "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-de-gabriel-attal/"
+        },
+        {
+          "periode": "6 juillet 2020 au 20 mai 2022",
+          "fonction": "Porte-parole du gouvernement de Jean Castex",
+          "niveau": "gouvernement",
+          "source": "https://en.wikipedia.org/wiki/Gabriel_Attal"
+        },
+        {
+          "periode": "20 mai 2022 au 20 juillet 2023",
+          "fonction": "Ministre délégué chargé des Comptes publics dans le gouvernement d'Élisabeth Borne",
+          "niveau": "gouvernement",
+          "source": "https://en.wikipedia.org/wiki/Gabriel_Attal"
+        },
+        {
+          "periode": "20 juillet 2023 au 9 janvier 2024",
+          "fonction": "Ministre de l'Éducation nationale et de la Jeunesse",
+          "niveau": "gouvernement",
+          "source": "https://en.wikipedia.org/wiki/Gabriel_Attal"
+        },
+        {
+          "periode": "9 janvier au 5 septembre 2024",
+          "fonction": "Premier ministre. À 34 ans, plus jeune chef de gouvernement de la Ve République. Présente la démission de son gouvernement le 8 juillet 2024, au lendemain des législatives provoquées par la dissolution, et expédie les affaires courantes jusqu'à la nomination de Michel Barnier",
+          "niveau": "gouvernement",
+          "source": "https://www.info.gouv.fr/les-anciens-premiers-et-premieres-ministres-de-la-ve-republique/gabriel-attal"
+        },
+        {
+          "periode": "depuis mars 2014",
+          "fonction": "Conseiller municipal de Vanves, dans les Hauts-de-Seine",
+          "niveau": "commune",
+          "source": "https://www.info.gouv.fr/les-anciens-premiers-et-premieres-ministres-de-la-ve-republique/gabriel-attal"
+        },
+        {
+          "periode": "depuis 2017",
+          "fonction": "Député de la 10e circonscription des Hauts-de-Seine, réélu en 2022 et en 2024",
+          "niveau": "national (Assemblée)",
+          "source": "https://www.info.gouv.fr/les-anciens-premiers-et-premieres-ministres-de-la-ve-republique/gabriel-attal"
+        },
+        {
+          "periode": "depuis septembre 2024",
+          "fonction": "Président du groupe Ensemble pour la République à l'Assemblée nationale",
+          "niveau": "national (Assemblée)",
+          "source": "https://en.wikipedia.org/wiki/Gabriel_Attal"
+        },
+        {
+          "periode": "depuis le 8 décembre 2024",
+          "fonction": "Secrétaire général du parti Renaissance, élu avec 94,9 % des voix, succédant à Stéphane Séjourné",
+          "niveau": "mouvement",
+          "source": "https://fr.wikipedia.org/wiki/Gabriel_Attal"
+        }
+      ],
+      "ou_lire_le_bilan": "Cas particulier : il cumule les deux natures de bilan, ce qui est rare. Six ans de fonctions gouvernementales, dont huit mois à Matignon, qui se jugent sur les politiques menées et ne laissent aucun relevé de votes. Et un mandat de député depuis 2017, toujours en cours, qui laisse lui un relevé nominatif complet dans l'open data de l'Assemblée. Point de contexte utile : selon Wikipédia, il a pris la tête du groupe parlementaire et du parti contre la volonté du président de la République, ce qui éclaire sa trajectoire depuis 2024.",
+      "positions": [
+        {
+          "theme": "education",
+          "position": {
+            "texte": "Trajectoire construite sur l'éducation : secrétaire d'État en 2018, puis ministre de l'Éducation nationale de juillet 2023 à janvier 2024.",
+            "source": "https://en.wikipedia.org/wiki/Gabriel_Attal",
+            "contexte": {
+              "type": "travail parlementaire",
+              "date": "2017 et 2018",
+              "ou": "Assemblée nationale, commission des Affaires culturelles et de l'Éducation, en qualité de rapporteur"
+            }
+          },
+          "acte": {
+            "texte": "Comme député, il a été rapporteur du projet de loi relatif à l'orientation et à la réussite des étudiants, en 2017 et 2018, au sein de la commission des Affaires culturelles et de l'Éducation.",
+            "niveau": "national (Assemblée)",
+            "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-de-gabriel-attal/",
+            "nature": "vote",
+            "date": "2017 et 2018"
+          },
+          "effet": {
+            "issue": "texte adopté",
+            "texte": "Être rapporteur n'est pas un vote parmi d'autres : c'est piloter l'examen d'un texte, défendre ses articles et négocier les amendements. Ce projet de loi a été adopté en 2018 et a réformé l'accès à l'enseignement supérieur, en remplaçant le système d'affectation des bacheliers. Effet concret : des centaines de milliers de lycéens passent chaque année par le dispositif qui en est issu.",
+            "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-de-gabriel-attal/",
+            "resultat": "adopté",
+            "alignement": "a porté le texte",
+            "suite": "Rapporteur, il a piloté l'examen du texte, qui a été adopté en 2018 et a réformé l'accès à l'enseignement supérieur. Le dispositif issu de cette loi concerne chaque année des centaines de milliers de lycéens.",
+            "loi": "promulguée en 2018",
+            "voie": "vote ordinaire, texte qu'il a rapporté",
+            "quinquennat": "Cette loi date de la première législature Macron, quand la majorité absolue permettait d'adopter des réformes sans négociation permanente."
+          }
+        },
+        {
+          "theme": "institutions_democratie",
+          "position": {
+            "texte": "Président du groupe Ensemble pour la République, il a plaidé pour un accord de non-censure allant des Républicains au Parti socialiste, afin d'échapper selon lui à la tutelle du Rassemblement national.",
+            "source": "https://www.francebleu.fr/infos/politique/la-motion-de-censure-adoptee-par-l-assemblee-nationale-le-gouvernement-de-michel-barnier-renverse-2672700",
+            "contexte": {
+              "type": "déclaration publique",
+              "date": "décembre 2024",
+              "ou": "Prise de position en faveur d'un accord de non-censure allant des Républicains au Parti socialiste"
+            }
+          },
+          "acte": {
+            "nature": "vote",
+            "date": "4 décembre 2024",
+            "texte": "Son groupe n'a pas voté la motion de censure du Nouveau Front populaire contre le gouvernement Barnier. Précision de lecture : dans une motion de censure, seuls les députés favorables votent, donc l'opposition à la motion ne laisse aucune trace nominative.",
+            "niveau": "national (Assemblée)",
+            "source": "https://www.francebleu.fr/infos/politique/la-motion-de-censure-adoptee-par-l-assemblee-nationale-le-gouvernement-de-michel-barnier-renverse-2672700"
+          },
+          "effet": {
+            "issue": "gouvernement renversé malgré son camp",
+            "resultat": "adopté",
+            "alignement": "a voté contre le résultat",
+            "loi": "gouvernement démissionnaire",
+            "voie": "motion de censure, après un 49.3",
+            "texte": "La motion a été adoptée par 331 voix. Sa ligne de non-censure n'a pas suffi, faute de majorité alternative.",
+            "suite": "Il avait été lui-même Premier ministre jusqu'en septembre 2024, poste perdu après la dissolution. Il se retrouve donc à défendre la stabilité gouvernementale depuis les bancs, sans majorité pour l'assurer.",
+            "quinquennat": "Sa trajectoire résume l'instabilité de la fin de quinquennat : plus jeune Premier ministre de la Ve République en janvier 2024, sorti de Matignon huit mois plus tard après une dissolution décidée par le président, puis chef de groupe cherchant des accords de non-censure.",
+            "source": "https://lcp.fr/actualites/le-gouvernement-de-michel-barnier-censure-au-terme-d-une-journee-historique-a-l"
+          }
+        },
+        {
+          "theme": "economie_fiscalite",
+          "position": {
+            "texte": "Virage revendiqué comme sécuritaire et libéral pour son parti, en vue de la présidentielle.",
+            "source": "https://directmag.fr/gabriel-attal-biographie-parcours-politique-et-actualites-2026/",
+            "contexte": {
+              "type": "ligne de parti",
+              "date": "2025",
+              "ou": "Orientation revendiquée pour Renaissance, dont il est secrétaire général depuis décembre 2024"
+            }
+          },
+          "acte": {
+            "texte": "Ministre délégué chargé des Comptes publics du 20 mai 2022 au 20 juillet 2023, soit quatorze mois à la tête du budget de l'État et de la lutte contre la fraude.",
+            "niveau": "gouvernement",
+            "source": "https://en.wikipedia.org/wiki/Gabriel_Attal",
+            "nature": "action",
+            "date": "mai 2022 à juillet 2023"
+          },
+          "effet": {
+            "issue": "responsabilité exécutive",
+            "texte": "Le ministre des Comptes publics prépare le budget et pilote son exécution, mais ce sont les députés qui le votent. Il en porte donc la conception et les résultats, sans qu'aucun vote personnel ne lui soit attribuable sur cette période. Comme député aujourd'hui, il vote en revanche les budgets, et le détail de ces scrutins est consultable sur Datan.",
+            "source": "https://datan.fr/deputes/hauts-de-seine-92/depute_gabriel-attal",
+            "resultat": "sans vote personnel",
+            "alignement": "sans objet",
+            "suite": "Le ministre des Comptes publics prépare le budget et pilote son exécution, mais ce sont les députés qui le votent. Comme député aujourd'hui, il vote en revanche les budgets, et ces scrutins sont consultables sur Datan.",
+            "loi": "sans objet",
+            "voie": "fonction ministérielle, pas de vote personnel",
+            "quinquennat": "Depuis 2024, les budgets ne passent plus qu'au prix de 49.3 successifs et de motions de censure, ce qui change radicalement les conditions d'exercice par rapport à son passage aux Comptes publics."
+          }
+        },
+        {
+          "theme": "immigration",
+          "position": {
+            "texte": "Son groupe s'est déclaré favorable à une remise en cause des accords franco-algériens, tout en annonçant qu'il voterait contre la proposition du Rassemblement national.",
+            "source": "https://lcp.fr/actualites/denonciation-des-accords-franco-algeriens-de-1968-un-texte-du-rn-adopte-a-une-voix-pres",
+            "contexte": {
+              "type": "séance publique",
+              "date": "30 octobre 2025",
+              "ou": "À la tribune de l'Assemblée, une députée du groupe Ensemble pour la République expose la position : favorable à une remise en cause des accords, mais vote contre le texte du Rassemblement national"
+            }
+          },
+          "acte": {
+            "texte": "Absent de l'hémicycle lors du scrutin du 30 octobre 2025, comme plus de la moitié des députés de son groupe. Il était en déplacement à un forum.",
+            "niveau": "national (Assemblée)",
+            "source": "https://fr.euronews.com/2025/10/30/accord-franco-algerien-de-1968-lassemblee-nationale-adopte-une-resolution-du-rn-a-une-voix",
+            "nature": "absent",
+            "date": "30 octobre 2025"
+          },
+          "effet": {
+            "issue": "absence décisive",
+            "resultat": "adopté",
+            "alignement": "absent lors du vote",
+            "texte": "Une absence peut peser autant qu'un vote. Le texte étant passé à une voix près, la présidente du groupe écologiste a désigné publiquement cette absence comme déterminante. Nous rapportons ce reproche comme une prise de position d'un adversaire politique, pas comme un constat neutre : d'autres groupes opposés au texte étaient eux aussi incomplets.",
+            "suite": "Ce cas montre pourquoi le taux de participation figure sur chaque fiche. Un député présent à 95 % des votes solennels peut manquer précisément celui qui bascule.",
+            "source": "https://fr.euronews.com/2025/10/30/accord-franco-algerien-de-1968-lassemblee-nationale-adopte-une-resolution-du-rn-a-une-voix",
+            "loi": "adoptée mais non contraignante",
+            "voie": "résolution, article 34-1 de la Constitution",
+            "quinquennat": "Ce scrutin de 2025 illustre la fin de quinquennat : sans majorité, un texte peut basculer sur quelques présences."
+          }
+        }
+      ],
+      "sources": [
+        "https://fr.wikipedia.org/wiki/Gabriel_Attal",
+        "https://en.wikipedia.org/wiki/Gabriel_Attal",
+        "https://www.info.gouv.fr/les-anciens-premiers-et-premieres-ministres-de-la-ve-republique/gabriel-attal",
+        "https://www.ici.fr/personnes/gabriel-attal",
+        "https://election-presidentielle-francaise-2027.fr/la-biographie-de-gabriel-attal/",
+        "https://fr.euronews.com/2025/10/30/accord-franco-algerien-de-1968-lassemblee-nationale-adopte-une-resolution-du-rn-a-une-voix"
+      ],
+      "maj": "2026-07-20",
+      "assiduite": {
+        "taux": 95,
+        "moyenne": 90,
+        "base": "votes solennels à l'Assemblée nationale, 17e législature, mandat en cours",
+        "loyaute": "Vote sur la même ligne que son groupe dans 98 % des cas, contre 95 % en moyenne.",
+        "note": "Moyenne de son propre groupe : 91 %.",
+        "source": "https://datan.fr/deputes/hauts-de-seine-92/depute_gabriel-attal",
+        "type": "votes"
+      },
+      "synthese": {
+        "texte": "C'est, des sept fiches, celui dont le parcours 2022-2027 est le plus dense, et il change trois fois de nature. D'abord l'exécutif : ministre délégué aux Comptes publics de mai 2022 à juillet 2023, ministre de l'Éducation jusqu'en janvier 2024, puis Premier ministre du 9 janvier au 5 septembre 2024, fonctions qui ne laissent aucun relevé de votes. Ensuite la rupture : son gouvernement tombe après la dissolution de juin 2024, sans avoir été censuré. Enfin la conquête d'une base propre : président du groupe Ensemble pour la République en septembre 2024, secrétaire général de Renaissance en décembre avec 94,9 % des voix, deux prises que Wikipédia décrit comme obtenues contre la volonté du président de la République. Comme député, il vote 95 % des scrutins solennels pour une moyenne de 90 %, et suit son groupe dans 98 % des cas. Sur le fond, il défend en décembre 2024 un accord de non-censure allant des Républicains au Parti socialiste, revendique en 2025 un virage sécuritaire et libéral pour son parti, et son groupe annonce le 30 octobre 2025 être favorable à une remise en cause des accords franco-algériens tout en votant contre le texte du Rassemblement national. Il était absent lors de ce scrutin, décidé à une voix près.",
+        "cle": "Un profil de gouvernement devenu chef de parti, qui défend la stabilité institutionnelle sans disposer d'une majorité pour l'assurer."
+      }
+    },
+    {
+      "slug": "raphael-glucksmann",
+      "nom": "Raphaël Glucksmann",
+      "bord": "gauche sociale-démocrate",
+      "parti": "Place publique",
+      "statut": "pressentie, officialisation annoncée pour l'automne 2026",
+      "parcours": [
+        {
+          "periode": "avant 2018",
+          "fonction": "Essayiste et documentariste. Conseiller de Mikheil Saakachvili en Géorgie, puis engagé sur les droits humains à l'international. Aucun mandat électif",
+          "niveau": "non électif",
+          "source": "https://www.elyseescope.com/le-radar/raphael-glucksmann-candidature-2027"
+        },
+        {
+          "periode": "novembre 2018",
+          "fonction": "Cofondateur du mouvement Place publique, avec Claire Nouvian, l'économiste Thomas Porcher et Jo Spiegel, avec l'objectif affiché d'unifier la gauche sans La France insoumise",
+          "niveau": "mouvement",
+          "source": "https://election-presidentielle-francaise-2027.fr/la-biographie-de-raphael-glucksmann/"
+        },
+        {
+          "periode": "depuis 2019",
+          "fonction": "Député européen. Élu en 2019 à la tête d'une liste réunissant Place publique, le Parti socialiste et Nouvelle Donne, qui obtient 6,19 % et 2 sièges. Réélu en 2024 en conduisant la liste Réveiller l'Europe, qui obtient 13,83 %, troisième score national et 3 sièges",
+          "niveau": "européen",
+          "source": "https://en.wikipedia.org/wiki/Place_Publique"
+        },
+        {
+          "periode": "mandat en cours",
+          "fonction": "Membre du groupe des Socialistes et Démocrates, dont il copréside la délégation française. Siège aux commissions des affaires étrangères et du commerce international, vice-président de la sous-commission des droits de l'homme, corapporteur sur le dossier EDIP, et membre depuis février 2025 de la commission spéciale sur le bouclier européen de la démocratie",
+          "niveau": "européen",
+          "source": "https://place-publique.eu/trombinoscope/d7gAAtkKcvueTJRMqeYBC/raphael-glucksmann"
+        }
+      ],
+      "ou_lire_le_bilan": "Le cas inverse de Marine Tondelier : tout son bilan d'élu est européen, et il n'a aucun mandat national. Chercher ses votes à l'Assemblée ou au Sénat ne donnerait rien. Son relevé nominatif se trouve dans l'open data du Parlement européen. Repère d'assiduité disponible : un taux de participation aux votes en séance plénière de 87 %, pour une moyenne du Parlement européen d'environ 82 %, chiffre à recouper sur les données officielles avant publication définitive.",
+      "positions": [
+        {
+          "theme": "europe_international",
+          "position": {
+            "texte": "Ligne pro-européenne assumée : défense de l'État de droit, soutien aux démocraties menacées, refus de toute alliance avec La France insoumise.",
+            "source": "https://www.lenouveaupresident.com/candidats/raphael-glucksmann",
+            "contexte": {
+              "type": "campagne électorale",
+              "date": "juin 2024",
+              "ou": "Européennes, tête de liste Réveiller l'Europe, arrivée en tête à gauche avec 13,83 %"
+            }
+          },
+          "acte": {
+            "texte": "Corapporteur sur le dossier EDIP au sein de la sous-commission sécurité et défense, membre des commissions des affaires étrangères et du commerce international, et vice-président de la sous-commission des droits de l'homme.",
+            "niveau": "européen",
+            "source": "https://place-publique.eu/trombinoscope/d7gAAtkKcvueTJRMqeYBC/raphael-glucksmann",
+            "nature": "action",
+            "date": "mandat en cours"
+          },
+          "effet": {
+            "issue": "influence de négociation",
+            "texte": "Être corapporteur au Parlement européen, c'est écrire et négocier un texte au nom de sa commission, puis le défendre face au Conseil. C'est le levier le plus concret dont dispose un eurodéputé, bien au-delà d'un simple vote. Mais l'issue finale dépend d'un accord entre le Parlement, la Commission et les États membres : l'influence est réelle, le résultat n'est jamais garanti par une seule personne.",
+            "source": "https://place-publique.eu/trombinoscope/d7gAAtkKcvueTJRMqeYBC/raphael-glucksmann",
+            "resultat": "en cours",
+            "alignement": "négociateur du texte",
+            "suite": "Corapporteur : il écrit et négocie un texte au nom de sa commission, puis le défend face au Conseil. L'issue dépend d'un accord entre le Parlement, la Commission et les États membres, donc aucun résultat n'est garanti par une seule personne.",
+            "loi": "en cours de négociation",
+            "voie": "procédure législative ordinaire de l'Union",
+            "quinquennat": "Sa liste est arrivée en tête à gauche aux européennes de juin 2024, scrutin dont le résultat a directement motivé la dissolution de l'Assemblée."
+          }
+        },
+        {
+          "theme": "institutions_democratie",
+          "position": {
+            "texte": "Dans un livre publié en mai 2026, Nous avons encore envie, il expose les lignes de ce qu'il appelle un contrat patriotique : convention citoyenne, école, service civique obligatoire, et volonté d'investir des thèmes qu'il juge délaissés par la gauche, dont la nation, l'autorité et l'immigration.",
+            "source": "https://lcp.fr/actualites/presidentielle-raphael-glucksmann-devoile-les-premieres-lignes-de-son-possible-programme",
+            "contexte": {
+              "type": "livre programme",
+              "date": "mai et juin 2026",
+              "ou": "Ouvrage Nous avons encore envie, publié chez Allary, puis rassemblement d'Aubervilliers du 13 juin 2026"
+            }
+          },
+          "acte": {
+            "texte": "Aucun acte législatif national à son nom, faute de mandat en France. Son seul résultat électoral national est le score de 13,83 % obtenu par sa liste aux européennes de 2024, en tête à gauche.",
+            "niveau": "européen",
+            "source": "https://en.wikipedia.org/wiki/Place_Publique",
+            "nature": "aucun",
+            "date": "mai 2026"
+          },
+          "effet": {
+            "issue": "propositions sans effet à ce stade",
+            "texte": "Ces annonces relèvent du programme, pas de l'action : rien n'a encore été soumis à un vote, en France comme en Europe. À la date de cette fiche, sa candidature n'est d'ailleurs pas officialisée, l'annonce étant attendue à l'automne 2026. Nous la classons donc comme pressentie, et non comme déclarée.",
+            "source": "https://lcp.fr/actualites/presidentielle-raphael-glucksmann-devoile-les-premieres-lignes-de-son-possible-programme",
+            "resultat": "sans vote",
+            "alignement": "sans objet",
+            "suite": "Propositions de programme, jamais soumises à un vote à ce jour. Sa candidature n'est d'ailleurs pas officialisée, l'annonce étant attendue à l'automne 2026.",
+            "loi": "sans objet",
+            "voie": "propositions de programme, jamais soumises au vote",
+            "quinquennat": "Il refuse toute alliance avec La France insoumise et s'oppose à une primaire, dans une gauche fragmentée depuis la fin du Nouveau Front populaire."
+          }
+        }
+      ],
+      "sources": [
+        "https://place-publique.eu/trombinoscope/d7gAAtkKcvueTJRMqeYBC/raphael-glucksmann",
+        "https://en.wikipedia.org/wiki/Place_Publique",
+        "https://lcp.fr/actualites/presidentielle-raphael-glucksmann-devoile-les-premieres-lignes-de-son-possible-programme",
+        "https://www.publicsenat.fr/dossier/raphael-glucksmann",
+        "https://election-presidentielle-francaise-2027.fr/la-biographie-de-raphael-glucksmann/",
+        "https://www.lenouveaupresident.com/candidats/raphael-glucksmann",
+        "https://www.elyseescope.com/le-radar/raphael-glucksmann-candidature-2027"
+      ],
+      "maj": "2026-07-20",
+      "assiduite": {
+        "taux": 87,
+        "moyenne": 82,
+        "base": "votes en séance plénière au Parlement européen, mandat en cours",
+        "loyaute": "",
+        "note": "Chiffre à recouper sur les données officielles du Parlement européen avant publication définitive.",
+        "source": "https://votons-2027.fr/candidats/glucksmann",
+        "type": "votes"
+      },
+      "synthese": {
+        "texte": "Son cas est le miroir inverse des précédents : tout son bilan d'élu est européen, et il n'a aucun mandat national. Député européen depuis 2019, il est réélu en juin 2024 à la tête de la liste Réveiller l'Europe, alliance de Place publique et du Parti socialiste, qui obtient 13,83 % des voix et arrive en tête à gauche, troisième score national. Ce résultat est directement lié à la décision de dissoudre l'Assemblée, prise dans la foulée du scrutin. Au Parlement européen, il siège au groupe des Socialistes et Démocrates, dont il copréside la délégation française, aux commissions des affaires étrangères et du commerce international, à la sous-commission des droits de l'homme dont il est vice-président, et depuis février 2025 à la commission spéciale sur le bouclier européen de la démocratie. Il y est corapporteur sur un dossier, fonction qui consiste à écrire et négocier un texte. Sa participation aux votes en plénière atteint 87 %, pour une moyenne d'environ 82 %. Sur la stratégie, il refuse toute alliance avec La France insoumise et s'oppose à une primaire de la gauche, et expose ses lignes programmatiques dans un livre publié en mai 2026.",
+        "cle": "Une légitimité électorale nationale acquise par un scrutin européen, sans aucun mandat français : son influence passe par la négociation à Bruxelles, pas par un vote à Paris."
+      }
+    }
+  ]
+}
