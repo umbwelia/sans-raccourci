@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sans Raccourci</title>
+<style>
+:root{
+  --bg:#ffffff; --surface:#ffffff; --surface-2:#f6f5f1;
+  --text:#1c1c1a; --muted:#6b6a64; --faint:#94938c;
+  --border:#e6e4dd; --accent:#3a5f8a; --maxw:760px;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1a1a18; --surface:#232320; --surface-2:#2a2a26;
+    --text:#ece9e1; --muted:#a3a199; --faint:#78766f; --border:#34342f; --accent:#8ab0da; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px 64px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:.5px solid var(--border);margin-bottom:28px}
+.brand{font-weight:600;font-size:16px;color:var(--text)}
+.nav{display:flex;gap:16px;font-size:14px}
+.nav a{color:var(--muted)}
+.nav a.active{color:var(--text);border-bottom:2px solid var(--border);padding-bottom:3px}
+.eyebrow{font-size:12px;color:var(--faint);letter-spacing:.04em;margin:0 0 4px}
+h1{font-size:24px;font-weight:600;margin:0 0 10px}
+h2{font-size:18px;font-weight:600;margin:32px 0 12px}
+.lede{font-size:15px;color:var(--muted);margin:0 0 28px}
+p{margin:0 0 12px}
+.chip{font-size:11px;background:var(--surface-2);color:var(--muted);padding:2px 9px;border-radius:20px;white-space:nowrap}
+.chip-fait{background:rgba(58,95,138,.14);color:var(--accent)}
+.card{background:var(--surface);border:.5px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.card-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.card-head .name{font-weight:600;font-size:15px;color:var(--text)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.col .k{font-size:11px;color:var(--faint);margin:0 0 3px}
+.col .v{font-size:13px;color:var(--muted);margin:0 0 4px}
+.src{font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:8px}
+td,th{text-align:left;padding:8px 10px;border-bottom:.5px solid var(--border);vertical-align:top}
+th{font-size:12px;color:var(--faint);font-weight:500}
+.foot{margin-top:28px;padding-top:14px;border-top:.5px solid var(--border);font-size:12px;color:var(--faint)}
+.grid-links{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.linklist{list-style:none;padding:0;margin:0}
+.linklist li{padding:8px 0;border-bottom:.5px solid var(--border);font-size:15px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.count{font-size:12px;color:var(--faint);margin:0 0 8px}
+.prose p{font-size:14px;color:var(--muted)}
+.prose h3{font-size:15px;margin:20px 0 6px}
+
+.av{width:40px;height:40px;border-radius:50%;flex:0 0 40px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;background:var(--surface-2);color:var(--muted);object-fit:cover;overflow:hidden}
+.av-lg{width:64px;height:64px;flex:0 0 64px;font-size:20px}
+.idhead{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.credit{font-size:11px;color:var(--faint);margin:0 0 18px}
+.linklist li .who{display:flex;align-items:center;gap:10px;min-width:0}
+.av-sm{width:28px;height:28px;flex:0 0 28px;font-size:11px}
+
+.stat{background:var(--surface);border:.5px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.stat-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.stat-h .n{font-weight:600;font-size:15px}
+.row{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:6px 0;border-top:.5px solid var(--border);font-size:13px}
+.row .l{color:var(--faint);font-size:11px;padding-top:2px}
+.row .d{color:var(--muted)}
+.dots{display:inline-flex;gap:3px;vertical-align:middle}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--border)}
+.dot.on{background:var(--accent)}
+.legend{font-size:12px;color:var(--faint);margin:0 0 18px}
+.smallnote{font-size:12px;color:var(--faint);border-top:.5px solid var(--border);padding-top:14px;margin-top:26px}
+.smallnote p{font-size:12px;color:var(--faint);margin:0 0 6px}
+@media(max-width:560px){.row{grid-template-columns:1fr;gap:2px}}
+@media(max-width:560px){.cols,.grid-links{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+
+<script>
+var DATA = { themes: [], candidats: [] };
+
+function esc(s){return (s==null?'':String(s)).replace(/[&<>"]/g,function(m){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];});}
+function srcLink(u){return u?'<a class="src" href="'+esc(u)+'">source</a>':'<span class="src" style="color:var(--faint)">source à ajouter</span>';}
+function themeLabel(cle){var t=DATA.themes.find(function(x){return x.cle===cle;});return t?t.label:cle;}
+
+
+function initials(nom){return (nom||'').split(/[ -]/).filter(Boolean).slice(0,2).map(function(w){return w[0].toUpperCase();}).join('');}
+function avatar(c,cls){
+  var k=cls||'av';
+  if(c.photo) return '<img class="av '+k+'" src="'+esc(c.photo)+'" alt="Portrait de '+esc(c.nom)+'" loading="lazy" decoding="async">';
+  return '<span class="av '+k+'" aria-hidden="true">'+esc(initials(c.nom))+'</span>';
+}
+function creditLine(c){
+  if(!c.photo) return '';
+  var t='Photo : '+esc(c.photo_credit||'crédit à compléter');
+  return '<p class="credit">'+(c.photo_source?'<a href="'+esc(c.photo_source)+'">'+t+'</a>':t)+'</p>';
+}
+
+
+function dots(n){var o='';for(var i=1;i<=5;i++){o+='<span class="dot'+(i<=n?' on':'')+'"></span>';}return '<span class="dots" aria-label="influence '+n+' sur 5">'+o+'</span>';}
+function statCard(o){
+  var h='<div class="stat"><div class="stat-h"><span class="n">'+o.nom+'</span>'+(o.tag?'<span class="chip">'+o.tag+'</span>':'')+'</div>';
+  h+='<div class="row"><span class="l">ce que c\u0027est</span><span class="d">'+o.quoi+'</span></div>';
+  h+='<div class="row"><span class="l">comment on l\u0027obtient</span><span class="d">'+o.comment+'</span></div>';
+  h+='<div class="row"><span class="l">combien de temps</span><span class="d">'+o.duree+'</span></div>';
+  h+='<div class="row"><span class="l">impact réel</span><span class="d">'+dots(o.poids)+' '+o.impact+'</span></div>';
+  return h+'</div>';
+}
+
+function topbar(active){
+  function a(key,label,href){return '<a class="'+(active===key?'active':'')+'" href="'+href+'">'+label+'</a>';}
+  return '<div class="topbar"><a class="brand" href="#/">sans raccourci</a><nav class="nav">'+
+    a('theme','par thème','#/theme/energie_climat')+a('candidat','par candidat','#/')+a('statuts','les statuts','#/statuts')+'</nav></div>';
+}
+function foot(){return '<div class="foot">pas de commentaires, pas de likes, pas de compteurs. chaque ligne renvoie à sa source. versionné sur GitHub.</div>';}
+
+function renderHome(){
+  var themes=DATA.themes.map(function(t){return '<li><a href="#/theme/'+t.cle+'">'+esc(t.label)+'</a></li>';}).join('');
+  var cands=DATA.candidats.map(function(c){return '<li><span class="who">'+avatar(c,'av-sm')+'<a href="#/candidat/'+esc(c.slug)+'">'+esc(c.nom)+'</a></span><span class="chip">'+(c.positions||[]).length+' / '+DATA.themes.length+' thèmes</span></li>';}).join('');
+  return topbar('')+'<h1>Sans Raccourci</h1>'+
+    '<p class="lede">Comprendre qui propose quoi, qui s\u0027est vraiment engagé sur quoi, et comment les médias le racontent. Tous les bords à égalité, chaque affirmation rattachée à sa source.</p>'+
+    '<div class="grid-links"><div><h2>Par thème</h2><ul class="linklist">'+(themes||'<li>...</li>')+'</ul></div>'+
+    '<div><h2>Par candidat</h2><p class="count">'+DATA.candidats.length+' candidat(s) pour l\u0027instant. La liste s\u0027allongera avec les fiches.</p><ul class="linklist">'+(cands||'<li>...</li>')+'</ul></div></div>'+
+    '<p style="margin-top:28px"><a href="#/comprendre">comprendre les niveaux de mandat</a></p>'+foot();
+}
+function renderTheme(cle){
+  var cards=DATA.candidats.map(function(c){
+    var p=(c.positions||[]).find(function(x){return x.theme===cle;});
+    var posTxt=p&&p.position?p.position.texte:'à documenter', posSrc=p&&p.position?p.position.source:'';
+    var actTxt=p&&p.acte?p.acte.texte:'à documenter', actSrc=p&&p.acte?p.acte.source:'';
+    return '<div class="card"><div class="card-head">'+avatar(c,'av')+'<a class="name" href="#/candidat/'+esc(c.slug)+'">'+esc(c.nom)+'</a><span class="chip">'+esc(c.bord||'')+'</span></div>'+
+      '<div class="cols"><div class="col"><p class="k">position affichée</p><p class="v"><em>'+esc(posTxt)+'</em></p>'+srcLink(posSrc)+'</div>'+
+      '<div class="col"><p class="k">a voté ou fait</p><p class="v"><em>'+esc(actTxt)+'</em></p><span class="chip chip-fait">fait</span> '+srcLink(actSrc)+'</div></div></div>';
+  }).join('');
+  return topbar('theme')+'<p class="eyebrow">thème</p><h1>'+esc(themeLabel(cle))+'</h1>'+
+    '<p class="lede">en 30 secondes : ce que chaque candidat propose pour 2027, mis en regard de ce qu\u0027il a réellement voté ou fait. tout est sourcé, rien n\u0027est commenté.</p>'+
+    (cards||'<p class="lede">Aucun candidat pour l\u0027instant.</p>')+foot();
+}
+function renderCandidat(slug){
+  var c=DATA.candidats.find(function(x){return x.slug===slug;});
+  if(!c) return topbar('candidat')+'<h1>Candidat introuvable</h1>'+foot();
+  var parcours=(c.parcours||[]).map(function(m){return '<tr><td>'+esc(m.periode)+'</td><td>'+esc(m.fonction)+'</td><td>'+esc(m.niveau)+'</td><td>'+srcLink(m.source)+'</td></tr>';}).join('');
+  var positions=(c.positions||[]).map(function(p){
+    return '<div class="card"><div class="card-head"><span class="name">'+esc(themeLabel(p.theme))+'</span></div>'+
+      '<div class="cols"><div class="col"><p class="k">position affichée</p><p class="v"><em>'+esc(p.position?p.position.texte:'à documenter')+'</em></p>'+srcLink(p.position?p.position.source:'')+'</div>'+
+      '<div class="col"><p class="k">a voté ou fait</p><p class="v"><em>'+esc(p.acte?p.acte.texte:'à documenter')+'</em></p><span class="chip chip-fait">fait</span> '+srcLink(p.acte?p.acte.source:'')+'</div></div></div>';
+  }).join('') || '<p class="v" style="color:var(--faint)">Aucune position documentée pour l\u0027instant.</p>';
+  var sources=(c.sources||[]).map(function(u){return '<li><a href="'+esc(u)+'">'+esc(u)+'</a></li>';}).join('');
+  return topbar('candidat')+'<p class="eyebrow">candidat</p>'+
+    '<div class="idhead">'+avatar(c,'av-lg')+'<h1 style="margin:0">'+esc(c.nom)+'</h1></div>'+
+    '<p class="lede" style="margin-bottom:6px">'+[esc(c.bord),esc(c.parti),'candidature '+esc(c.statut||'')].filter(Boolean).join(' \u00b7 ')+'</p>'+creditLine(c)+
+    '<h2>parcours et niveaux de mandat</h2><table><thead><tr><th>période</th><th>fonction</th><th>niveau</th><th>source</th></tr></thead><tbody>'+parcours+'</tbody></table>'+
+    '<p class="v" style="font-size:14px;color:var(--muted)">'+esc(c.ou_lire_le_bilan||'')+'</p>'+
+    '<h2>positions par thème</h2>'+positions+'<h2>sources</h2><ul class="linklist">'+sources+'</ul>'+foot();
+}
+function renderStatuts(){
+  var cand=[
+    {nom:'Pressentie',tag:'candidature',quoi:'La personne est citée comme candidate probable, par la presse ou son entourage, mais ne s\u0027est engagée à rien.',comment:'Rien de formel. Ce statut est attribué par des tiers, pas par l\u0027intéressé.',duree:'Instable. Peut durer des années ou disparaître en un communiqué.',poids:1,impact:'Aucune valeur juridique. Sert surtout à alimenter les sondages.'},
+    {nom:'Déclarée',tag:'candidature',quoi:'La personne a annoncé publiquement qu\u0027elle serait candidate.',comment:'Une annonce publique, à une date précise. Nous notons toujours cette date.',duree:'Jusqu\u0027au retrait, à la défaite en primaire, ou à la validation officielle.',poids:2,impact:'N\u0027engage que celui qui la prononce. Aucune valeur en droit.'},
+    {nom:'En primaire',tag:'candidature',quoi:'La personne concourt d\u0027abord à une désignation interne à son camp.',comment:'Par un vote des adhérents ou des sympathisants, selon les règles propres au parti.',duree:'Jusqu\u0027au résultat de la primaire. Conditionnel par nature.',poids:2,impact:'Ne sera candidate que si elle gagne. Un seul survivant par camp.'},
+    {nom:'A renoncé',tag:'candidature',quoi:'La personne a explicitement écarté une candidature.',comment:'Par une déclaration publique de retrait.',duree:'Réversible. Un renoncement peut être révisé.',poids:1,impact:'Conservé ici volontairement : effacer ces cas reviendrait à réécrire l\u0027histoire.'},
+    {nom:'Officielle',tag:'candidature',quoi:'Le seul statut qui existe en droit.',comment:'500 présentations d\u0027élus validées par le Conseil constitutionnel, qui publie la liste des candidats admis à concourir.',duree:'De la publication de la liste jusqu\u0027au scrutin, au plus tard quinze jours avant le premier tour.',poids:5,impact:'Donne accès au bulletin de vote, au financement public et au temps d\u0027antenne encadré.'}
+  ];
+  var mand=[
+    {nom:'Conseiller municipal, maire',tag:'commune',quoi:'L\u0027échelon du quotidien : écoles primaires, urbanisme, voirie, propreté, crèches, action sociale.',comment:'Les électeurs élisent les conseillers au scrutin de liste paritaire à deux tours, étendu depuis une loi du 21 mai 2025 aux communes de moins de 1 000 habitants, soit 71 % d\u0027entre elles. Le maire n\u0027est pas élu par les habitants : le conseil le désigne.',duree:'Six ans. Dernières municipales les 15 et 22 mars 2026.',poids:2,impact:'Faible en droit national, fort en politique : c\u0027est le test du poids des partis et le tremplin classique vers Paris.'},
+    {nom:'Conseiller départemental',tag:'département',quoi:'Le social avant tout : RSA, protection de l\u0027enfance, personnes âgées et handicap, plus les collèges et routes départementales.',comment:'Scrutin binominal majoritaire à deux tours : dans chaque canton, on élit un binôme composé d\u0027une femme et d\u0027un homme, ce qui impose la parité.',duree:'Six ans, renouvellement intégral.',poids:2,impact:'Peu visible, mais exécute sur le terrain une grande part des politiques sociales décidées à Paris.'},
+    {nom:'Conseiller régional',tag:'région',quoi:'Lycées, transports régionaux, formation professionnelle, développement économique, aménagement du territoire.',comment:'Scrutin de liste proportionnel à deux tours, avec une prime majoritaire de 25 % des sièges à la liste arrivée en tête. Le président est élu par les conseillers.',duree:'Six ans.',poids:3,impact:'Présider une région, c\u0027est piloter un gros budget et une administration entière : la meilleure preuve de gestion hors ministère.'},
+    {nom:'Député',tag:'Assemblée nationale',quoi:'Vote la loi et le budget, contrôle le gouvernement et peut le renverser par une motion de censure.',comment:'577 sièges, scrutin uninominal majoritaire à deux tours, un député par circonscription.',duree:'Cinq ans en principe, mais c\u0027est le seul mandat que le président peut interrompre par une dissolution.',poids:5,impact:'Le plus transparent de tous : chaque scrutin public est nominatif, donc on sait qui a voté quoi, et quel jour.'},
+    {nom:'Sénateur',tag:'Sénat',quoi:'Co-écrit la loi avec l\u0027Assemblée dans la navette, représente les collectivités, contrôle le gouvernement.',comment:'Suffrage indirect : ce ne sont pas les citoyens qui votent mais des grands électeurs, très majoritairement des délégués des conseils municipaux. C\u0027est pourquoi les municipales déterminent la couleur du Sénat.',duree:'Six ans, renouvellement par moitié tous les trois ans. Prochain scrutin des grands électeurs le 27 septembre 2026.',poids:4,impact:'Ne peut ni renverser le gouvernement ni être dissous. Son rôle est celui d\u0027un frein et d\u0027un correcteur.'},
+    {nom:'Ministre, Premier ministre',tag:'gouvernement',quoi:'Prépare et applique la loi, ne la vote pas. Réformes portées, décrets, gestion des administrations et des budgets.',comment:'On n\u0027y est pas élu. Le Premier ministre est nommé par le président, les ministres sur proposition du Premier ministre.',duree:'Aucune durée fixe. Un ministre reste tant qu\u0027il est maintenu, parfois quelques mois.',poids:5,impact:'Le pouvoir d\u0027agir le plus direct. Mais aucun relevé de votes : le bilan se lit sur les politiques menées.'},
+    {nom:'Député européen',tag:'Parlement européen',quoi:'Vote une large part du droit appliqué ensuite en France : marché unique, climat, numérique, agriculture, commerce, budget de l\u0027Union.',comment:'Scrutin de liste proportionnel, circonscription nationale unique depuis 2019, seuil de 5 %. On vote pour une liste, pas pour une personne de son territoire.',duree:'Cinq ans, à date fixe. Dernières européennes en juin 2024.',poids:4,impact:'720 eurodéputés dont 81 Français. Sous-estimé : beaucoup de règles vécues comme nationales sont d\u0027origine européenne.'},
+    {nom:'Chef de parti',tag:'mouvement',quoi:'Oriente une ligne, des alliances, une stratégie. Ce n\u0027est pas un mandat public.',comment:'Élection interne réservée aux adhérents, selon des règles propres à chaque formation.',duree:'Variable selon les statuts du parti.',poids:3,impact:'Aucun vote traçable, mais le contrôle de l\u0027investiture. On juge sur les prises de position et les choix d\u0027appareil.'}
+  ];
+  return topbar('statuts')+'<p class="eyebrow">les statuts</p><h1>Qui a quel statut, comment il l\u0027obtient, pour combien de temps</h1>'+
+    '<p class="lede">Une candidature n\u0027est pas un mandat, et un mandat n\u0027est pas l\u0027autre. Chaque statut a son mode d\u0027accès, sa durée et son poids réel. C\u0027est ce tableau qui permet de lire un bilan sans se tromper de règle.</p>'+
+    '<h2>Statuts de candidature</h2>'+
+    '<p class="legend">Tant que le Conseil constitutionnel n\u0027a pas publié la liste officielle, aucune candidature n\u0027existe en droit. Les points indiquent le poids réel du statut, de 1 à 5.</p>'+
+    cand.map(statCard).join('')+
+    '<h2>Statuts de mandat</h2>'+
+    '<p class="legend">C\u0027est ici que se lit un bilan. Encore faut-il le lire au bon endroit : un ministre n\u0027a pas de votes, un chef de parti non plus.</p>'+
+    mand.map(statCard).join('')+
+    '<div class="prose"><h3>Ce que ça change pour lire une fiche</h3>'+
+    '<p>Chaque fiche commence par le parcours, puis lit le bilan là où il existe vraiment : votes nominatifs pour un député, votes de liste pour un eurodéputé, politiques menées pour un ministre, gestion pour un maire ou un président de région. Comparer des gens qui n\u0027ont pas joué au même endroit, avec la même règle, serait le raccourci que ce site refuse.</p></div>'+
+    '<div class="smallnote"><p>Comment nous rédigeons : sources officielles d\u0027abord (Assemblée, Sénat, Parlement européen, Journal officiel, HATVP, Conseil constitutionnel), puis agrégateurs neutres (NosDéputés.fr, Datan.fr), la presse en dernier et seulement pour dater un propos. Fait, contexte et interprétation sont distingués. Même grille et même profondeur pour tous, sans adjectif de valeur. Sur les médias, nous affichons qui possède quoi et montrons plusieurs titres d\u0027un même fait, sans trancher. Toute erreur signalée est corrigée et la correction reste visible dans l\u0027historique du dépôt.</p></div>'+
+    foot();
+}
+
+function renderComprendre(){
+  return topbar('')+'<p class="eyebrow">comprendre</p><h1>Qui est élu comment, pour combien de temps, et pour décider quoi</h1><div class="prose">'+
+    '<p>Un candidat a rarement un seul bilan, mais un parcours réparti sur plusieurs niveaux. Chaque niveau a son mode d\u0027élection, sa durée, son rythme de renouvellement et son champ de décision. C\u0027est pour cela qu\u0027on ne juge pas tout le monde avec la même règle.</p>'+
+
+    '<h3>La commune</h3>'+
+    '<p><b>Comment on est élu.</b> Les électeurs élisent les conseillers municipaux au scrutin de liste paritaire à deux tours. Depuis une loi du 21 mai 2025, ce scrutin de liste s\u0027applique aussi aux communes de moins de 1 000 habitants, soit 71 % des communes françaises. Le maire n\u0027est pas élu directement par les habitants : c\u0027est le conseil municipal qui le désigne lors de sa première réunion.</p>'+
+    '<p><b>Durée et rythme.</b> Six ans. Les dernières municipales se sont tenues les 15 et 22 mars 2026, avec plus de 48 millions d\u0027électeurs appelés aux urnes.</p>'+
+    '<p><b>Ce qui s\u0027y décide.</b> Le quotidien le plus concret : écoles primaires, urbanisme et permis de construire, voirie, propreté, police municipale, crèches, action sociale de proximité.</p>'+
+    '<p><b>Portée nationale.</b> Faible en droit, forte en politique. Le scrutin sert de test grandeur nature du poids des partis avant la présidentielle, et une mairie reste le tremplin classique vers la scène nationale.</p>'+
+
+    '<h3>Le département</h3>'+
+    '<p><b>Comment on est élu.</b> Au scrutin binominal majoritaire à deux tours : dans chaque canton, les électeurs élisent un binôme composé d\u0027une femme et d\u0027un homme, ce qui garantit la parité. Le président du conseil départemental est ensuite élu par les conseillers.</p>'+
+    '<p><b>Durée et rythme.</b> Six ans, avec renouvellement intégral.</p>'+
+    '<p><b>Ce qui s\u0027y décide.</b> Surtout le social : RSA, protection de l\u0027enfance, personnes âgées et handicap. Plus les collèges et les routes départementales.</p>'+
+    '<p><b>Portée nationale.</b> Limitée en visibilité, mais le département exécute sur le terrain une grande partie des politiques sociales décidées à Paris.</p>'+
+
+    '<h3>La région</h3>'+
+    '<p><b>Comment on est élu.</b> Au scrutin de liste proportionnel à deux tours, avec une prime majoritaire de 25 % des sièges à la liste arrivée en tête, ce qui assure une majorité stable. Le président de région est élu par les conseillers régionaux.</p>'+
+    '<p><b>Durée et rythme.</b> Six ans.</p>'+
+    '<p><b>Ce qui s\u0027y décide.</b> Lycées, transports régionaux, formation professionnelle, développement économique, aménagement du territoire.</p>'+
+    '<p><b>Portée nationale.</b> Réelle. Présider une région, c\u0027est piloter un gros budget et une administration entière : c\u0027est la preuve de capacité de gestion la plus solide en dehors d\u0027un ministère.</p>'+
+
+    '<h3>L\u0027Assemblée nationale</h3>'+
+    '<p><b>Comment on est élu.</b> 577 députés élus au scrutin uninominal majoritaire à deux tours, un par circonscription. Chaque député représente un territoire précis, pas une liste nationale.</p>'+
+    '<p><b>Durée et rythme.</b> Cinq ans en principe, mais c\u0027est le seul mandat que le président de la République peut interrompre : une dissolution provoque des législatives anticipées, ce qui explique que le calendrier réel soit souvent décalé.</p>'+
+    '<p><b>Ce qui s\u0027y décide.</b> Le vote de la loi et du budget, le contrôle du gouvernement, et le pouvoir de le renverser par une motion de censure.</p>'+
+    '<p><b>Portée nationale.</b> Maximale, et c\u0027est surtout le niveau le plus transparent : chaque scrutin public est nominatif, donc on sait exactement qui a voté quoi, et quel jour.</p>'+
+
+    '<h3>Le Sénat</h3>'+
+    '<p><b>Comment on est élu.</b> Au suffrage indirect : ce ne sont pas les citoyens qui votent, mais un collège de grands électeurs composé très majoritairement de délégués des conseils municipaux. C\u0027est pourquoi les municipales déterminent en grande partie la couleur du Sénat. Scrutin majoritaire dans les départements peu peuplés, proportionnel dans les autres.</p>'+
+    '<p><b>Durée et rythme.</b> Six ans, avec renouvellement par moitié tous les trois ans, ce qui donne au Sénat une inertie voulue. Le prochain scrutin des grands électeurs est fixé au 27 septembre 2026.</p>'+
+    '<p><b>Ce qui s\u0027y décide.</b> 348 sénateurs co-écrivent la loi avec l\u0027Assemblée dans la navette parlementaire, représentent les collectivités et contrôlent le gouvernement. En cas de désaccord persistant, l\u0027Assemblée a le dernier mot.</p>'+
+    '<p><b>Portée nationale.</b> Le Sénat ne peut pas renverser le gouvernement et ne peut pas être dissous. Son influence est celle d\u0027un frein et d\u0027un correcteur, pas d\u0027un moteur.</p>'+
+
+    '<h3>Le gouvernement</h3>'+
+    '<p><b>Comment on y arrive.</b> On n\u0027y est pas élu. Le Premier ministre est nommé par le président de la République, et les ministres sont nommés sur proposition du Premier ministre. Le gouvernement est responsable devant l\u0027Assemblée, qui peut le renverser.</p>'+
+    '<p><b>Durée et rythme.</b> Aucune durée fixe : un ministre reste en poste tant qu\u0027il est maintenu, parfois quelques mois.</p>'+
+    '<p><b>Ce qui s\u0027y décide.</b> On n\u0027y vote pas la loi, on la prépare et on l\u0027applique : réformes portées, décrets, gestion des administrations et des budgets.</p>'+
+    '<p><b>Nuance décisive pour lire un bilan.</b> Un ministre n\u0027a aucun relevé de votes. Son bilan se lit sur les politiques menées et leurs résultats. Lui reprocher de ne pas avoir voté serait un contresens.</p>'+
+
+    '<h3>Le Parlement européen</h3>'+
+    '<p><b>Comment on est élu.</b> Au scrutin de liste proportionnel, dans une circonscription nationale unique depuis 2019, avec un seuil de 5 % pour obtenir des sièges. On vote pour une liste, pas pour une personne de son territoire.</p>'+
+    '<p><b>Durée et rythme.</b> Cinq ans, à date fixe. Les dernières européennes ont eu lieu en juin 2024.</p>'+
+    '<p><b>Ce qui s\u0027y décide.</b> 720 eurodéputés, dont 81 Français, votent une large part du droit qui s\u0027applique ensuite en France : marché unique, climat, numérique, agriculture, commerce, budget de l\u0027Union.</p>'+
+    '<p><b>Portée nationale.</b> Sous-estimée. Beaucoup de règles vécues comme nationales sont d\u0027origine européenne, et pour plusieurs candidats à 2027 c\u0027est le mandat où se trouve l\u0027essentiel de leur relevé de votes.</p>'+
+
+    '<h3>Diriger un parti</h3>'+
+    '<p><b>Comment on y arrive.</b> Par une élection interne, réservée aux adhérents, selon des règles propres à chaque formation. Ce n\u0027est pas un mandat public.</p>'+
+    '<p><b>Ce que ça donne.</b> Aucun vote traçable, mais le contrôle de la ligne, des alliances et surtout de l\u0027investiture. On juge alors sur les prises de position publiques et les choix d\u0027appareil.</p>'+
+
+    '<h3>Ce que ça change ici</h3>'+
+    '<p>Chaque fiche commence par le parcours, puis lit le bilan là où il existe vraiment : votes nominatifs pour un député, votes de liste européens pour un eurodéputé, politiques menées pour un ministre, gestion pour un maire ou un président de région. C\u0027est la seule façon de comparer des gens comparables.</p>'+
+    '</div>'+foot();
+}
+
+function router(){
+  if(!DATA.themes.length && !DATA.candidats.length){ document.getElementById('app').innerHTML=renderError(); return; }
+  var h=location.hash.replace(/^#\/?/,''); var parts=h.split('/'); var out;
+  if(parts[0]==='theme') out=renderTheme(parts[1]||'energie_climat');
+  else if(parts[0]==='candidat') out=renderCandidat(parts[1]);
+  else if(parts[0]==='statuts'||parts[0]==='methode') out=renderStatuts();
+  else if(parts[0]==='comprendre') out=renderComprendre();
+  else out=renderHome();
+  document.getElementById('app').innerHTML=out; window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',router);
+
+fetch('candidats.json',{cache:'no-store'})
+  .then(function(r){return r.json();})
+  .then(function(d){ DATA=d; router(); })
+  .catch(function(){ document.getElementById('app').innerHTML=renderError(); });
+</script>
+</body>
+</html>
