@@ -1,5 +1,5 @@
 {
-  "_doc": "Source de vérité unique du projet. Les pages index.html, themes/theme.html et candidats/candidat.html lisent toutes ce fichier. Ajouter un candidat ou une position ici le fait apparaître partout, sans double saisie. Structure documentee dans schema-candidat.json, regles dans METHODE.md.",
+  "_doc": "Source de verite unique. Voir METHODE.md. Champs photo: 'photo' (URL d'une image sous licence libre, Wikimedia Commons de preference), 'photo_credit' (auteur + licence, obligatoire si photo est rempli), 'photo_source' (page d'origine). Si photo est vide, le site affiche un avatar d'initiales, sans poids ni risque juridique.",
   "themes": [
     { "cle": "economie_fiscalite", "label": "économie et fiscalité" },
     { "cle": "energie_climat", "label": "énergie et climat" },
@@ -16,26 +16,40 @@
       "bord": "gauche radicale",
       "parti": "La France insoumise",
       "statut": "déclarée (annoncée en 2026)",
+      "photo": "",
+      "photo_credit": "",
+      "photo_source": "",
       "parcours": [
         { "periode": "années 1980-1990", "fonction": "Conseiller municipal de Massy, conseiller général puis vice-président du conseil général de l'Essonne", "niveau": "commune et département", "source": "https://www.europe1.fr/dossiers/jean-luc-melenchon" },
         { "periode": "à partir de 1986", "fonction": "Sénateur de l'Essonne", "niveau": "national (Sénat)", "source": "https://www.publicsenat.fr/actualites/politique/jean-luc-melenchon-quitte-l-assemblee-retour-sur-trente-ans-de-mandats" },
         { "periode": "2000-2002", "fonction": "Ministre délégué à l'Enseignement professionnel (gouvernement Jospin)", "niveau": "gouvernement", "source": "https://www.europe1.fr/dossiers/jean-luc-melenchon" },
-        { "periode": "2009-2017", "fonction": "Député européen, circonscription Sud-Ouest", "niveau": "européen", "source": "https://www.europe1.fr/dossiers/jean-luc-melenchon" },
-        { "periode": "2017-2022", "fonction": "Député des Bouches-du-Rhône", "niveau": "national (Assemblée)", "source": "https://www.publicsenat.fr/actualites/politique/jean-luc-melenchon-quitte-l-assemblee-retour-sur-trente-ans-de-mandats" },
-        { "periode": "depuis juin 2022", "fonction": "Sans mandat électif. Coprésident de l'Institut La Boétie, figure dirigeante de La France insoumise", "niveau": "mouvement", "source": "https://fr.wikipedia.org/wiki/Jean-Luc_Mélenchon" }
+        { "periode": "2009-2017", "fonction": "Député européen, circonscription Sud-Ouest (élu en 2009, réélu en 2014)", "niveau": "européen", "source": "https://en.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon" },
+        { "periode": "21 juin 2017 au 21 juin 2022", "fonction": "Député de la 4e circonscription des Bouches-du-Rhône. Président du groupe La France insoumise à l'Assemblée de 2017 à octobre 2021, remplacé par Mathilde Panot", "niveau": "national (Assemblée)", "source": "https://2017-2022.nosdeputes.fr/jean-luc-melenchon" },
+        { "periode": "depuis juin 2022", "fonction": "Sans mandat électif. Coprésident de l'Institut La Boétie, figure dirigeante de La France insoumise", "niveau": "mouvement", "source": "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon" }
       ],
-      "ou_lire_le_bilan": "Sans mandat électif depuis juin 2022 : son action récente se lit dans ses prises de position et la direction de La France insoumise, pas dans des votes. Relevé de votes historique : Assemblée 2017-2022 (NosDéputés, Datan) et Parlement européen 2009-2017 (open data du PE).",
+      "ou_lire_le_bilan": "Sans mandat électif depuis le 21 juin 2022 : son action récente se lit dans ses prises de position et la direction de La France insoumise, pas dans des votes. Son relevé de votes est donc historique, réparti entre l'Assemblée nationale (2017-2022) et le Parlement européen (2009-2017). Repère d'assiduité : pendant la 15e législature, il a participé à 98 % des votes solennels à l'Assemblée.",
       "positions": [
-        { "theme": "energie_climat", "position": { "texte": "à sourcer sur le programme 2027", "source": "" }, "acte": { "texte": "vote à extraire des scrutins Assemblée 2017-2022 et Parlement européen 2009-2017", "niveau": "national et européen", "source": "https://www.nosdeputes.fr/" } },
-        { "theme": "institutions_democratie", "position": { "texte": "à sourcer sur le programme 2027", "source": "" }, "acte": { "texte": "vote à extraire", "niveau": "national", "source": "https://www.nosdeputes.fr/" } }
+        {
+          "theme": "energie_climat",
+          "position": { "texte": "Programme 2027 non encore publié. Ligne historique revendiquée : écosocialisme, portée depuis la fondation de La France insoumise en 2016.", "source": "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon" },
+          "acte": { "texte": "Loi climat et résilience, scrutin public n°3738 du 4 mai 2021 (première lecture) : texte adopté par 332 voix pour, 77 contre et 145 abstentions. Le groupe La France insoumise a voté contre à l'unanimité de ses membres, jugeant le texte insuffisant. Précision de méthode : la source atteste un vote de groupe unanime, la confirmation nominative se lit sur la page du scrutin de l'Assemblée.", "niveau": "national (Assemblée)", "source": "https://lcp.fr/actualites/loi-climat-l-assemblee-nationale-adopte-le-texte-en-premiere-lecture-64120" }
+        },
+        {
+          "theme": "institutions_democratie",
+          "position": { "texte": "A déposé pendant son mandat une proposition de loi et une proposition de loi organique visant à instaurer la proportionnelle, rapportées le 26 avril 2021.", "source": "https://2017-2022.nosdeputes.fr/jean-luc-melenchon" },
+          "acte": { "texte": "Scrutin n°53 du 24 juillet 2017 : motion de rejet préalable qu'il a lui-même déposée contre le projet de loi pour la confiance dans la vie publique. Il a voté pour. Motion rejetée par 205 voix contre 23, et 10 abstentions.", "niveau": "national (Assemblée)", "source": "https://2017-2022.nosdeputes.fr/15/scrutin/53" }
+        }
       ],
       "sources": [
+        "https://2017-2022.nosdeputes.fr/jean-luc-melenchon",
+        "https://2017-2022.nosdeputes.fr/15/scrutin/53",
+        "https://lcp.fr/actualites/loi-climat-l-assemblee-nationale-adopte-le-texte-en-premiere-lecture-64120",
+        "https://datan.fr/deputes/bouches-du-rhone-13/depute_jeanluc-melenchon",
         "https://www.publicsenat.fr/actualites/politique/jean-luc-melenchon-quitte-l-assemblee-retour-sur-trente-ans-de-mandats",
         "https://www.europe1.fr/dossiers/jean-luc-melenchon",
-        "https://fr.wikipedia.org/wiki/Jean-Luc_Mélenchon",
-        "https://www.sondages-presidentielle2027.fr/candidats/jean-luc-melenchon.html"
+        "https://fr.wikipedia.org/wiki/Jean-Luc_M%C3%A9lenchon"
       ],
-      "maj": "2026-07-17"
+      "maj": "2026-07-20"
     }
   ]
 }
