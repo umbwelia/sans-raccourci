@@ -16,46 +16,46 @@
   },
   "photos": {
     "jean-luc-melenchon": {
-      "fichier": "",
-      "auteur": "",
-      "licence": "",
-      "source": ""
+      "fichier": "jean-luc-melenchon.png",
+      "auteur": "Manon Aubry",
+      "licence": "Creative Commons CC0 1.0 Universal Public Domain Dedication",
+      "source": "https://commons.wikimedia.org/wiki/File:M%C3%A9lenchon_2027.png"
     },
     "marine-tondelier": {
-      "fichier": "",
-      "auteur": "",
-      "licence": "",
-      "source": ""
+      "fichier": "marine.tondelier.jpg",
+      "auteur": "Selbymay",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "source": "https://commons.wikimedia.org/wiki/File:Huma2023MarineTondelier.jpg"
     },
     "edouard-philippe": {
-      "fichier": "",
-      "auteur": "",
-      "licence": "",
-      "source": ""
+      "fichier": "edouard-philippe.jpg",
+      "auteur": "Jacques Paquier",
+      "licence": "Creative Commons Attribution 2.0 Generic",
+      "source": "https://commons.wikimedia.org/wiki/File:%C3%89douard_Philippe_2019_(cropped).jpg"
     },
     "marine-le-pen": {
-      "fichier": "",
-      "auteur": "",
-      "licence": "",
-      "source": ""
+      "fichier": "marine-le-pen.jpg",
+      "auteur": "Vox España",
+      "licence": "Creative Commons CC0 1.0 Universal Public Domain Dedication",
+      "source": "https://commons.wikimedia.org/wiki/File:Marine_Le_Pen_VIVA_24_(2)_(cropped).jpg"
     },
     "bruno-retailleau": {
-      "fichier": "",
-      "auteur": "",
-      "licence": "",
-      "source": ""
+      "fichier": "bruno-retailleau.jpg",
+      "auteur": "Anthonymontardyfr",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "source": "https://commons.wikimedia.org/wiki/File:Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_(cropped2).jpg"
     },
     "gabriel-attal": {
-      "fichier": "",
-      "auteur": "",
-      "licence": "",
-      "source": ""
+      "fichier": "gabriel-attal.jpg",
+      "auteur": "Thomas Bresson",
+      "licence": "Creative Commons Attribution 4.0 International",
+      "source": "https://commons.wikimedia.org/wiki/File:Gabriel_Attal_March_2024.jpg"
     },
     "raphael-glucksmann": {
-      "fichier": "",
-      "auteur": "",
-      "licence": "",
-      "source": ""
+      "fichier": "raphael-glucksmann.jpg",
+      "auteur": "European Union 2024",
+      "licence": "European Union, 1998 – 2026",
+      "source": "https://commons.wikimedia.org/wiki/File:1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg"
     }
   }
 }
